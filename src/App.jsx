@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import logo from './assets/logo.svg';
 import rainyProfile from './assets/rainyProfile.png';
 import note from './assets/note.svg';
-import T1 from './assets/Timeline2.svg';
+import T1 from './assets/timeline2.svg';
 import S1 from './assets/story.svg';
 import Story from './subComponent/story.jsx';
 import TimeLine from './subComponent/timeline.jsx';
