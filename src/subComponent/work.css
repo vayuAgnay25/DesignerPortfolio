@@ -1,0 +1,12 @@
+.workLine {
+    
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 12px;
+  text-transform: uppercase !important;
+  /* background-color: red; */
+  color: #c2c2c2;
+  position: relative;
+  text-transform: uppercase;
+}

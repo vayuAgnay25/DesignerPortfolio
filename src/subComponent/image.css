@@ -1,0 +1,48 @@
+#imageGallery{
+    display: grid;
+    height: 260px;
+    width: 875px;
+    margin: auto;
+    margin-top: 80px;
+    grid-template-columns: repeat(4,1fr);
+    transform: translateX(40px);
+    gap: 30px;
+}
+
+#imageGallery div{
+    box-shadow: 0 0 24px #d4d4d4;
+    border-radius: 2px;
+    z-index: 1;
+    background-color:white;
+}
+
+
+#imageGallery div img{
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-56%);
+}
+
+#imageGallery div.card img{
+    width: 90%;
+}
+
+/* card positioning */
+
+#imageGallery div#card1{
+    transform: rotate(-8deg) translateX(40px);
+    z-index: 0 !important;
+}
+
+#imageGallery div#card2{
+    transform: rotate(4deg);
+}
+
+#imageGallery div#card3{
+    transform: rotate(-6deg) translateX(-40px);
+}
+
+#imageGallery div#card4{
+    transform: rotate(3.5deg) translateX(-80px);
+}
