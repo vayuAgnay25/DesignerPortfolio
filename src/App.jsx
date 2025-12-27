@@ -8,6 +8,7 @@ import Story from './subComponent/story.jsx';
 import TimeLine from './subComponent/timeline.jsx';
 import Image from './subComponent/Images.jsx';
 import Work from './subComponent/Work.jsx'
+import Gallery from "./subComponent/Galery.jsx";
 import HoverImages from "./subComponent/HoverImages.jsx"
 
 import './App.css';
@@ -50,11 +51,11 @@ function App() {
           <ul>
             <li><a href="#page2">story</a></li>
             <li><a href="#page7">work</a></li>
-            <li><a href="#capture">captures</a></li>
+            <li><a href="#page8">captures</a></li>
           </ul>
         </div>
         <div id="GIT">
-          <a href="#mail">get in touch</a>
+          <a href="#page9">get in touch</a>
         </div>
       </div>
 
@@ -143,11 +144,53 @@ function App() {
         </div>
       </div>
       <div id="page6" className='pageBunch'>
-        {/* <HoverImages/> */}
+        <HoverImages />
       </div>
       <div id="page7" className='pageBunch'>
-        <Work/>
+        <Work />
       </div>
+      <div id="page8" className='pageBunch'>
+        <Gallery />
+      </div>
+      <div id="page9" className='pageBunch'>
+        <div className="contactPage">
+          <h1 id='CHead'>
+            Ready to Start?
+          </h1>
+          <p id='CLine'>
+            Let's create something amazing together. Drop me a line and let's get the conversation started.
+          </p>
+          <button id='contact'>
+            get in Touch
+          </button>
+          <div className="buttons">
+            <a href="" id="link2" className='linkedin'>
+              <img src="" alt="" />
+              <p>Linkedin</p>
+            </a>
+            <a href="" id="link3" className='behance'>
+              <img src="" alt="" />
+              <p>Behance</p>
+            </a>
+            <a href="" id="link1" className='dribble'>
+              <img src="" alt="" />
+              <p>Dribble</p>
+            </a>
+            <a href="" id="link4" className='mail'>
+              <p>Gmail</p>
+            </a>
+          </div>
+          <p id='location'>
+            Dharamshala, India
+          </p>
+          <p id='love'>
+            
+          </p>
+        </div>
+      </div>
+      <footer>
+        <p></p>
+      </footer>
     </div>
   );
 }
