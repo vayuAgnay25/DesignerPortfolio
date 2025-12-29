@@ -10,35 +10,67 @@ import Image from './subComponent/Images.jsx';
 import Work from './subComponent/Work.jsx'
 import Gallery from "./subComponent/Galery.jsx";
 import HoverImages from "./subComponent/HoverImages.jsx"
-
+import gsap from 'gsap';
+// eslint-disable-next-line no-unused-vars
+import { motion, useScroll, useTransform } from 'motion/react';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useGSAP } from '@gsap/react';
 import './App.css';
 
+gsap.registerPlugin(ScrollTrigger);
+
 function App() {
+  const greetingList = ["Happy New Year,", "Hello,", "Namaste,", "Hola,", "Bonjour,", "Salaam,"];
+
+
+
   // --- STATES ---
   const [currentTime, setCurrentTime] = useState(new Date());
   const [activeTab, setActiveTab] = useState('story'); // "story" ya "timeline"
-
   const mainRef = useRef(null);
-  const cursorRef = useRef(null);
+  const constraintsRef = useRef(null);
+  const { contextSafe } = useGSAP({
+    scope: mainRef
+  })
 
-  // --- CLOCK LOGIC ---
+  const Page1animation = contextSafe((e) => {
+    gsap.to(e.currentTarget, {
+      backgroundImage: `radial-gradient(circle 500px at ${e.clientX}px ${e.clientY}px,rgba(255,255,255,0.9),white)`,
+    });
+  })
+
+  const upwardMove = contextSafe((e) => {
+    console.log(e);
+    gsap.to(e.currentTarget, {
+      y: -10,
+      duration: 0.3,
+      ease: "power4.out",
+      overwrite: "auto"
+    });
+  });
+
+  const backToNormal = contextSafe((e) => {
+    gsap.to(e.currentTarget, {
+      y: 0,
+      duration: 0.4,
+      ease: "power2.out",
+      overwrite: "auto"
+    });
+  });
+
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentTime(new Date());
-    }, 1000); // 1 sec update taaki time "slow" na lage
+    }, 1000);
 
-    return () => clearInterval(timer); // Cleanup
+    return () => clearInterval(timer);
   }, []);
 
-  // Time formatting (HH:MM)
   const hours = String(currentTime.getHours()).padStart(2, '0');
   const minutes = String(currentTime.getMinutes()).padStart(2, '0');
 
   return (
-    <div ref={mainRef}>
-      <div ref={cursorRef} id='cursor'></div>
-
-      {/* NAVIGATION SECTION */}
+    <div id='main' ref={mainRef}>
       <div id="nav">
         <div id="time">
           <img src={logo} alt="logo" />
@@ -49,29 +81,64 @@ function App() {
         </div>
         <div id="link">
           <ul>
-            <li><a href="#page2">story</a></li>
-            <li><a href="#page7">work</a></li>
-            <li><a href="#page8">captures</a></li>
+            <li>
+              <a
+                href="#page2"
+                onClick={() => setActiveTab('story')}
+                className={activeTab === 'story' ? 'active' : ''}
+              >
+                story
+              </a>
+            </li>
+            <li>
+              <a
+                href="#page7"
+                onClick={() => setActiveTab('work')}
+                className={activeTab === 'work' ? 'active' : ''}
+              >
+                work
+              </a>
+            </li>
+            <li>
+              <a
+                href="#page8"
+                onClick={() => setActiveTab('captures')}
+                className={activeTab === 'captures' ? 'active' : ''}
+              >
+                captures
+              </a>
+            </li>
           </ul>
         </div>
         <div id="GIT">
-          <a href="#page9">get in touch</a>
+          <a
+            href="#page9"
+            onClick={() => setActiveTab('git')}
+            className={activeTab === 'git' ? 'active' : ''}
+          >
+            get in touch
+          </a>
         </div>
       </div>
 
-      {/* PAGE 1: HERO */}
       <div id="page1" className="pageBunch">
-        <div className="layer">
+        <div onMouseMove={Page1animation} ref={constraintsRef} className="layer">
+
           <div className="paragraph">
+            <div id="greetingList"><ul>
+            {
+              greetingList.map((greet)=><li>{greet}</li>)
+            }
+          </ul></div>
             <h1>I'm Rainy.</h1><br />
-            <p>I'm a Senior UX Designer at MAQ Software, shaping digital journeys that help people explore, discover, and interact with products more effortlessly.</p>
+            <p onMouseEnter={upwardMove} onMouseLeave={backToNormal} >I'm a Senior UX Designer at MAQ Software, shaping digital journeys that help people explore, discover, and interact with products more effortlessly.</p>
           </div>
-          <img id="rainyProfile" src={rainyProfile} alt="Profile" />
-          <img id="notepad" src={note} alt="Note" />
+          <div>
+            <img id="rainyProfile" src={rainyProfile} alt="Profile" />
+            <img id="notepad" src={note} alt="Note" />
+          </div>
         </div>
       </div>
-
-      {/* PAGE 2: ABOUT SECTION */}
       <div id="page2" className="pageBunch">
         <div className="paragraph">
           <div className="aboutLine">
@@ -94,7 +161,6 @@ function App() {
             </div>
           </div>
 
-          {/* DYNAMIC COMPONENT SWITCHING */}
           <div className="aboutContent">
             {activeTab === 'story' ? <Story /> : <TimeLine />}
             <Image />
@@ -102,15 +168,14 @@ function App() {
         </div>
       </div>
 
-      {/* OTHER PAGES */}
       <div id="page3" className="pageBunch">
-        <iframe
-          src="https://camera-psi-eight.vercel.app/"
-          frameborder="0"
-          allow='camera;microphone'
-        ></iframe>
+
       </div>
-      <div id="page4" className="pageBunch">
+      <motion.div
+        onViewportLeave={{ "--bg-color": "#ffffff" }}
+        id="page4"
+        className=" pageBunch"
+      >
         <div className="dive-deep">
           <h1>
             <span>Sometimes,</span>
@@ -122,8 +187,8 @@ function App() {
             I love exploring complex systems—design libraries or codebases, and breaking them down to understand what drives them. Discovering the “why” behind the “what” is what excites me.
           </p>
         </div>
-      </div>
-      <div id="page5" className="pageBunch">
+      </motion.div>
+      <div id="page5" className=" pageBunch">
         <div className="keep-simple">
           <h1>
             <span>And</span>
@@ -143,16 +208,16 @@ function App() {
           </p>
         </div>
       </div>
-      <div id="page6" className='pageBunch'>
+      <div id="page6" className=' pageBunch'>
         <HoverImages />
       </div>
-      <div id="page7" className='pageBunch'>
+      <div id="page7" className=' pageBunch'>
         <Work />
       </div>
-      <div id="page8" className='pageBunch'>
+      <div id="page8" className=' pageBunch'>
         <Gallery />
       </div>
-      <div id="page9" className='pageBunch'>
+      <div id="page9" className=' pageBunch'>
         <div className="contactPage">
           <h1 id='CHead'>
             Ready to Start?
@@ -183,14 +248,8 @@ function App() {
           <p id='location'>
             Dharamshala, India
           </p>
-          <p id='love'>
-            
-          </p>
         </div>
       </div>
-      <footer>
-        <p></p>
-      </footer>
     </div>
   );
 }

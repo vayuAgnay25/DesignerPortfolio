@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400..700;1,400..700&display=swap');
+
+@font-face {
+  font-family: 'orange-avenue';
+  src: url('./assets/font/OrangeAvenueDEMO-Regular.otf') format('opentype');
+}
+
+/* --- Core Fixes --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden; /* ScrollTrigger horizontal jitter rokne ke liye */
+  width: 100%;
+}
+
+.pageBunch {
+  min-height: 100vh; /* height: 100vh se better hai pinning ke liye */
+  width: 100%;       /* 100vw scrollbar issue deta hai, 100% is safe */
+  position: relative;
+}
+
+/* --- Navigation (Fixed & Centered) --- */
+#nav {
+  background-color: white;
+  border: 1px solid #ededed;
+  border-radius: 100px;
+  padding: 12px 20px;
+  width: 550px; /* Thoda width adjust kiya contents ke liye */
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  z-index: 1000; /* Highest priority */
+  will-change: transform; /* Smooth scrolling compatibility */
+}
+
+#nav #time {
+  display: flex;
+  gap: 10px;
+  align-items: center; /*changes by Vayu*/
+}
+
+#nav #time img{
+  height: 18px;
+}
+
+#nav #time p {
+  background-image: linear-gradient(to right, #f5f5f5, #ffffff);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 10px;
+  border: 1px solid #ededed;
+}
+
+#nav #link ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  align-items: center;
+}
+
+#nav #link ul li a {
+  text-decoration: none;
+  text-transform: capitalize;
+  color: #414141;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 50px;
+  transition: 0.3s;
+}
+
+#nav #link ul li a:hover {
+  background: #f5f5f5;
+}
+
+#nav #GIT {
+  display: flex;
+  align-items: center; /* Vertical centering ensure karne ke liye */
+}
+
+#nav #GIT a {
+  padding: 8px 16px; /* Thoda wide padding buttons par better lagta hai */
+  border-radius: 20px;
+  background-color: #222222;
+  text-decoration: none;
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: capitalize;
+  transition: all 0.3s ease; /* Smooth transition for hover */
+  display: inline-block; /* Taaki padding sahi se behave kare */
+}
+
+/* --- Page 1 Content --- */
+#page1 {
+  background-image: url('./assets/whiteGrid.avif');
+  background-size: cover;
+}
+
+#page1 .layer {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-image: radial-gradient(circle 500px at 100px 100px, rgba(255, 255, 255, 0.9), white);
+  overflow: hidden; /* Elements screen se bahar na jayein */
+}
+
+#page1 .layer .paragraph {
+  position: absolute; /* relative top/left se better positioning */
+  top: 65%;
+  left: 10%;
+  transform: translateY(-50%);
+  width: 500px;
+}
+
+#page1 .layer .paragraph h1 {
+  letter-spacing: -2px;
+  font-size: clamp(60px, 8vw, 108px); /* Responsive font */
+  font-family: 'League Spartan', sans-serif;
+  line-height: 0.9;
+}
+
+
+
+/* Wrapper ki position hi aapki 'Desired Location' hogi */
+.main-drag-wrapper {
+  position: absolute;
+  right: 5%;         /* Screenshot ke hisaab se position */
+  top: 25%;
+  display: flex;
+  align-items: center;
+  cursor: grab;
+  z-index: 100;
+}
+
+.main-drag-wrapper:active {
+  cursor: grabbing;
+}
+
+/* Profile Photo */
+#rainyProfile {
+  height: 480px; 
+  pointer-events: none; /* Mandatory for drag to work on parent */
+}
+
+/* Notepad placement (relative to Profile) */
+#notepad {
+  position: absolute;
+  left: -80px;      /* Profile ke upar overlay position */
+  top: -40px;
+  transform: scale(0.7) rotate(-5deg);
+  z-index: 101;
+  pointer-events: none;
+}
+
+/* --- Page 2-5 Refinement --- */
+#page2 .paragraph {
+  width: 80%;
+  /* max-height: 100vh ko hatayein agar text lamba hai, varna scroll trigger end nahi hoga */
+  min-height: 100vh; 
+  position: relative;
+  margin: 0 auto; /* left: 10% ki jagah auto margin best hai horizontal centering ke liye */
+  padding-top: 100px; /* top: 50px ki jagah padding use karein taaki GSAP calculations clean rahein */
+}
+
+#page2 .paragraph .aboutLine {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; /* Elements ko vertically center rakhne ke liye */
+  height: auto; /* Fixed 25px se button cut sakta hai, auto rakhein */
+  margin-bottom: 80px; 
+  will-change: transform; /* Browser ko animation ke liye ready rakhne ke liye */
+}
+
+/* Switch Button Container */
+#page2 .paragraph .aboutLine .buttonSwitch {
+  width: 205px;
+  height: 40px; /* Thoda sa breathing space */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: #f2f2f2;
+  padding: 4px;
+  border-radius: 8px;
+  position: relative;
+  z-index: 5;
+}
+
+#page2 .paragraph .aboutLine .buttonSwitch button {
+  border-radius: 6px;
+  border: none;
+  font-weight: 500;
+  font-size: 13px;
+  background: transparent; /* Default transparent rakhein, active class handles the rest */
+  transition: all 0.3s ease; /* Smooth toggle ke liye */
+  cursor: pointer;
+}
+
+.active {
+  background-color: white !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Professional look */
+}
+
+#page4, #page5 {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Fix for iframe transparency/scrolling */
+#page3 iframe {
+  border: none;
+  margin-top: 50px;
+}
+
+/* --- Contact Page --- */
+#page9 {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#page9 .contactPage {
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+}
+
+/* --- Helpers --- */
+.active {
+  background-color: white !important;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
