@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import logo from './assets/logo.svg';
 import rainyProfile from './assets/rainyProfile.png';
-import note from './assets/note.svg';
 import T1 from './assets/timeline2.svg';
 import S1 from './assets/story.svg';
 import Story from './subComponent/story.jsx';
@@ -11,11 +10,12 @@ import Work from './subComponent/Work.jsx'
 import Gallery from "./subComponent/Galery.jsx";
 import HoverImages from "./subComponent/HoverImages.jsx"
 import gsap from 'gsap';
-// eslint-disable-next-line no-unused-vars
-import { motion, useScroll, useTransform } from 'motion/react';
+import Camera from './subComponent/Camera.jsx'
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 import './App.css';
+// eslint-disable-next-line no-unused-vars
+import { motion } from 'framer-motion';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -126,17 +126,14 @@ function App() {
 
           <div className="paragraph">
             <div id="greetingList"><ul>
-            {
-              greetingList.map((greet)=><li>{greet}</li>)
-            }
-          </ul></div>
+              {
+                greetingList.map((greet) => <li>{greet}</li>)
+              }
+            </ul></div>
             <h1>I'm Rainy.</h1><br />
-            <p onMouseEnter={upwardMove} onMouseLeave={backToNormal} >I'm a Senior UX Designer at MAQ Software, shaping digital journeys that help people explore, discover, and interact with products more effortlessly.</p>
+            <p onMouseEnter={upwardMove} onMouseLeave={backToNormal} >I'm a Senior UX Designer at MAQ Software, shaping digital journeys that help people explore, discover, and interact with products more effortlessly.</p><p>I love designing and building products.</p>
           </div>
-          <div>
-            <img id="rainyProfile" src={rainyProfile} alt="Profile" />
-            <img id="notepad" src={note} alt="Note" />
-          </div>
+          <img id="rainyProfile" src={rainyProfile} alt="Profile" />
         </div>
       </div>
       <div id="page2" className="pageBunch">
@@ -169,10 +166,13 @@ function App() {
       </div>
 
       <div id="page3" className="pageBunch">
-
+        <Camera />
       </div>
       <motion.div
-        onViewportLeave={{ "--bg-color": "#ffffff" }}
+      whileInView={{"--bg-color": "#222222",
+        backgroundColor: "#222222"
+      }}
+        onViewportLeave={{ '--bg-color': "#ffffff" }}
         id="page4"
         className=" pageBunch"
       >

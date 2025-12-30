@@ -2,11 +2,13 @@
     display: grid;
     height: 260px;
     width: 875px;
-    margin: auto;
-    margin-top: 80px;
+    /* margin-left: -29%; */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8%;
     grid-template-columns: repeat(4,1fr);
-    transform: translateX(40px);
     gap: 30px;
+    /* scale: 60%; */
 }
 
 #imageGallery div{
@@ -45,4 +47,12 @@
 
 #imageGallery div#card4{
     transform: rotate(3.5deg) translateX(-80px);
+}
+
+@media (max-width: 990px) {
+    #imageGallery{
+        width: 100%;
+        height: auto;
+        /* grid-template-columns: repeat(2,1fr); */
+    }
 }
