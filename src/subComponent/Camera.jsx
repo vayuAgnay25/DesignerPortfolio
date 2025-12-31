@@ -75,6 +75,7 @@ export default function Camera() {
     };
 
     const download = async () => {
+        setCapturedImage(null);
         const originalElement = document.getElementById("paper");
         if (!originalElement) return;
 
@@ -131,7 +132,7 @@ export default function Camera() {
                 </div>
             </div>
 
-            <div id="paper" className="paper" style={{ display: capturedImage ? "block" : "none" }} id="paper">
+            <div id="paper" className="paper" style={{ display: capturedImage ? "block" : "none" }}>
                 <img id="imageDisplay" src={capturedImage} alt="Captured moment" />
                 <p id="timeStamp"></p>
             </div>

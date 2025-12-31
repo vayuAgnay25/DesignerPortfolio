@@ -26,6 +26,8 @@
   justify-content: center;
   flex-wrap: nowrap;
   transition: all 0.1s linear;
+  margin-top: 50%;
+  padding-bottom: 50%;
 }
 
 #lens{
@@ -150,12 +152,42 @@ button{
 
 .paper{
   height: 238px;
-  box-shadow: 0 20px 50px  #d7d7d7;
+  box-shadow: 0 20px 50px #00000016;
   place-self:center;
   margin-bottom: 4%;
   margin-top: 7%;
   width: 204px;
   background-color: white;
+}
+
+.printEffect {
+  animation: print 0.5s ease-in-out 0.5s;
+}
+
+@keyframes print {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.deleteEffect {
+  animation: delete 0.5s ease-in-out 0.5s;
+}
+
+@keyframes delete {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
 }
 
 .paper img{
@@ -177,15 +209,17 @@ p#timeStamp{
 h6{
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 3%;
+  margin-bottom: 10%;
   margin-top: 60px;
   width: 350px;
-  font-weight: 400;
-  font-size: 30px;
+  font-weight: 500;
+  font-size: 28px;
   font-family: 'caveat';
   text-align: center;
   letter-spacing: -1px;
+  color: #545454;
 }
+
 .buttons{
   width: 250px;
   height: 100px;

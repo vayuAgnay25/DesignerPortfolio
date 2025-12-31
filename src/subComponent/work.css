@@ -1,10 +1,9 @@
 .workLine{
-  width: 80%;
+  width: 100%;
   display:flex;
   flex-direction: row;
   justify-content: space-between;
   height: 25px;
-  margin:auto;
   margin-top: 80px;
 }
 
@@ -12,20 +11,15 @@
   font-size: 12px;
   text-transform: uppercase;
   color: #c2c2c2;
-  position: relative;
-  left: 20px;
   margin-top: auto;
-  top: -7%;
-  transform: translateX(20px);
-}
+ }
 
 .workDisplay .displayLine{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width:  1050px;
+  width:  100%;
   height: 50px;
-  margin:auto;
   margin-top: 60px;
 }
 .workDisplay .displayLine div#workTitle{
@@ -86,11 +80,11 @@
 
 .workDisplay .display {
   height: 500px;
-  width: 1050px;
-  box-shadow: 0 0 40px #e5e5e5;
+  width: 100%;
+  box-shadow: 0 0 40px #00000010;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 60px;
+  margin-top: 40px;
   border-radius: 25px;
   display: flex;
 }
@@ -98,14 +92,16 @@
 .workDisplay .display video{
   place-self: center;
   border-style: solid;
-  border-width: 5px;
+  border-width: 8px;
+  background-color: white;
   margin-left: auto;
   margin-right: auto;
   height: 874px;
   width: 402px;
   transform: scale(0.5);
   padding: 0%;
-  border-radius: 40px;
+  border-radius: 80px;
+  object-fit: cover;
 }
 
  .workDisplay .display img{
@@ -125,11 +121,9 @@
 }
 
 .workDisplay p#workDetails{
-  width: 1050px;
+  width: 100%;
   height: max-content;
   text-align: start;
-  margin-left: auto;
-  margin-right: auto;
   margin-top: 40px;
   line-height: 24px;
 }
@@ -151,7 +145,6 @@
   font-size: 14px;
   font-weight: 500;
   position: relative;
-  left: 15.7%;
   top:40px;
   cursor: pointer;
 }

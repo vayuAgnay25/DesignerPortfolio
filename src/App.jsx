@@ -28,14 +28,20 @@ function App() {
   const [currentTime, setCurrentTime] = useState(new Date());
   const [activeTab, setActiveTab] = useState('story'); // "story" ya "timeline"
   const mainRef = useRef(null);
-  const constraintsRef = useRef(null);
+  const trigRef = useRef([]);
+  const addtoRefs = (el) => {
+    if (el && !trigRef.current.includes(el)) {
+      trigRef.current.push(el);
+    }
+  }
+
   const { contextSafe } = useGSAP({
     scope: mainRef
   })
 
   const Page1animation = contextSafe((e) => {
     gsap.to(e.currentTarget, {
-      backgroundImage: `radial-gradient(circle 500px at ${e.clientX}px ${e.clientY}px,rgba(255,255,255,0.9),white)`,
+      backgroundImage: `radial-gradient(circle 800px at ${e.clientX}px ${e.clientY}px,rgba(255,255,255,0.9),white)`,
     });
   })
 
@@ -57,6 +63,8 @@ function App() {
       overwrite: "auto"
     });
   });
+
+
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -122,7 +130,7 @@ function App() {
       </div>
 
       <div id="page1" className="pageBunch">
-        <div onMouseMove={Page1animation} ref={constraintsRef} className="layer">
+        <div onMouseMove={Page1animation} className="layer">
 
           <div className="paragraph">
             <div id="greetingList"><ul>
@@ -169,12 +177,13 @@ function App() {
         <Camera />
       </div>
       <motion.div
-      whileInView={{"--bg-color": "#222222",
-        backgroundColor: "#222222"
-      }}
-        onViewportLeave={{ '--bg-color': "#ffffff" }}
+        whileInView={{
+          backgroundColor: "#222222"
+        }}
+        onViewportLeave={{ backgroundColor: "#ffffff" }}
         id="page4"
         className=" pageBunch"
+        ref={addtoRefs}
       >
         <div className="dive-deep">
           <h1>
@@ -208,13 +217,13 @@ function App() {
           </p>
         </div>
       </div>
-      <div id="page6" className=' pageBunch'>
+      <div id="page6" ref={addtoRefs} className=' pageBunch'>
         <HoverImages />
       </div>
       <div id="page7" className=' pageBunch'>
         <Work />
       </div>
-      <div id="page8" className=' pageBunch'>
+      <div id="page8" ref={addtoRefs} className=' pageBunch'>
         <Gallery />
       </div>
       <div id="page9" className=' pageBunch'>
