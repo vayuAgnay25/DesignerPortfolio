@@ -1,12 +1,11 @@
 .GaleryGrid{
     height: max-content;
-    width: 1050px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 30%;
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    gap: 50px;
+    gap: 30px;
 }
 
 .GaleryGrid div{
@@ -30,7 +29,6 @@
 }
 
 #captureLine{
-  width: 1050px;
   display:flex;
   height: max-content;
   margin:auto;
