@@ -276,6 +276,15 @@ function Redirect(){
   </>)
 }
 
+function Error(){
+  window.location.href = "/"
+  return(
+    <>
+      <h1>page not found</h1>
+    </>
+  )
+}
+
 
 
 export default function App(){
@@ -285,7 +294,7 @@ export default function App(){
         <Route  path='/' element={<Main/>}/>
         <Route  path='/roamMate' element={<RoamMate/>}/>
         <Route  path= "/designSystem" element={<Redirect/>}/>
-        <Route/>
+        <Route  path='/*' element={}/>
       </Routes>
     </BrowserRouter>
   )
