@@ -8,7 +8,7 @@ import P7I1 from './roamAssets/roam88.png'
 
 /* [779,1528] window*/
 
-export default function App() {
+export default function RoamMate() {
   document.title="Rainy | RoamMate"
   return (
     <div id="roamMain">
