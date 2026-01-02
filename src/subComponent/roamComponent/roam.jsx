@@ -1,10 +1,10 @@
 import './roamStyle.css'
-import P1V from './assets/roamcover.mp4'
-import P4I2 from './assets/roamP3.png'
-import roamText from './assets/roamText.svg'
-import charLetter from './assets/roamAa1.png'
-import hat from './assets/roamHat.png'
-import P7I1 from './assets/roam88.png'
+import P1V from './roamAssets/roamcover.mp4'
+import P4I2 from './roamAssets/roamP3.png'
+import roamText from './roamAssets/roamText.svg'
+import charLetter from './roamAssets/roamAa1.png'
+import hat from './roamAssets/roamHat.png'
+import P7I1 from './roamAssets/roam88.png'
 
 /* [779,1528] window*/
 
