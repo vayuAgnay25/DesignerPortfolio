@@ -105,9 +105,10 @@
 }
 
  .workDisplay .display img{
-  height: 95%;
   border-radius: 40px;
   margin: auto;
+  max-width: 90%;
+  max-height: 90%;
  }
 
  .workDisplay .display:hover video{
