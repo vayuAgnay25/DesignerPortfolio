@@ -2,7 +2,6 @@ import './cameraStyle.css'
 import { useState, useRef } from 'react'
 import html2canvas from 'html2canvas';
 
-console.log(window.innerWidth)
 
 export default function Camera() {
     const [powerState, setPowerState] = useState(false);
