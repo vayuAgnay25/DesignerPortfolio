@@ -294,7 +294,7 @@ export default function App(){
         <Route  path='/' element={<Main/>}/>
         <Route  path='/roamMate' element={<RoamMate/>}/>
         <Route  path= "/designSystem" element={<Redirect/>}/>
-        <Route  path='/*' element={}/>
+        <Route  path='/*' element={<Error/>}/>
       </Routes>
     </BrowserRouter>
   )

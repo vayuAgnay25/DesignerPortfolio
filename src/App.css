@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 @font-face {
   font-family: 'orange-avenue';
@@ -61,7 +62,7 @@
 
 /* Navigation */
 #nav {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.9);
   border: 1px solid #ededed;
   border-radius: 100px;
   padding: 12px;
@@ -117,7 +118,7 @@
   text-decoration: none;
   text-transform: capitalize;
   color: #414141;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -549,7 +550,6 @@ min-height: 120vw;
 #main footer {
   background-color: red;
 }
-
 #main{
   background-color: var(--bg-color,"ffffff");
   display: grid;
