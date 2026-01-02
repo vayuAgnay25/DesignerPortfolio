@@ -17,9 +17,54 @@
 #greetingList{
   height: 60px;
   transform: translateY(-60px);
-  font-weight: 600;
-  color: #b5b5b5;
+  font-weight: 500;
+  color: #4f4f4f;
   overflow: hidden;
+}
+
+.sliding-window {
+  height: 60px; /* Ek line ki height */
+  overflow: hidden;
+  margin-top: 30px;
+}
+
+.sliding-list {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10px;
+  /* 10s duration, cubic-bezier se snap wala effect aayega */
+  animation: slide-up 12s cubic-bezier(0.76, 0, 0.24, 1) infinite;
+}
+
+.greeting {
+  font-size: 50px;
+  font-style: italic;
+  font-family: 'Newsreader';
+  font-weight: 500;
+  color: #444;
+  line-height: 60px;
+  height: 60px;
+}
+
+.static-heading {
+  font-size: 8rem;
+  font-weight: 900;
+  letter-spacing: -2px;
+  color: #000;
+  line-height: 0.9;
+  margin-top: 5px;
+}
+
+/* Animation Logic */
+/* calculation: 100 / (number of items) */
+@keyframes slide-up {
+  0%, 15% { transform: translateY(0); }
+  18%, 31% { transform: translateY(-60px); }
+  34%, 47% { transform: translateY(-120px); }
+  50%, 63% { transform: translateY(-180px); }
+  66%, 79% { transform: translateY(-240px); }
+  82%, 95% { transform: translateY(-300px); }
+  100% { transform: translateY(-360px); }
 }
 
 #greetingList ul{
@@ -193,7 +238,7 @@
   width: 500px;
   position: relative;
   float: left;
-  top: 30%;
+  top: 20%;
   left: 10%;
 }
 
@@ -217,7 +262,8 @@
   letter-spacing: -0.5px;
   font-size: 100px;
   font-family: 'League Spartan';
-  margin-bottom: 60px;
+  margin-bottom: 40px;
+  margin-top: 80px;
   display: flex;
   flex-direction: row;
   line-height: 24px;

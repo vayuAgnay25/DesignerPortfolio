@@ -161,7 +161,7 @@ button{
 }
 
 .printEffect {
-  animation: print 0.5s ease-in-out 0.5s;
+  animation: print 1s ease-in-out 0.5s;
 }
 
 @keyframes print {

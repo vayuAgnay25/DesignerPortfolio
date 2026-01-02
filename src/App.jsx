@@ -136,11 +136,17 @@ function Main() {
         <div onMouseMove={Page1animation} className="layer">
 
           <div className="paragraph">
-            <div id="greetingList"><ul>
-              {
-                greetingList.map((greet) => <li>{greet}</li>)
-              }
-            </ul></div>
+            {/* Animated Part */}
+            <div className="sliding-window">
+              <div className="sliding-list">
+                {/* Array mapping for clean code */}
+                {greetingList.map((text, index) => (
+                  <span key={index} className="greeting">{text}</span>
+                ))}
+                {/* Repeat for smooth loop */}
+                <span className="greeting">{greetingList[0]}</span>
+              </div>
+            </div>
             <h1>I'm Rainy.</h1><br />
             <p onMouseEnter={upwardMove} onMouseLeave={backToNormal} >I'm a Senior UX Designer at MAQ Software, shaping digital journeys that help people explore, discover, and interact with products more effortlessly.</p><p>I love designing and building products.</p>
           </div>

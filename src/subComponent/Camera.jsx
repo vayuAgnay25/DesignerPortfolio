@@ -60,13 +60,14 @@ export default function Camera() {
             setCapturedImage(imageFile);
             
             document.getElementById('paper').classList.add('printEffect')
-            shutdown();
+            //shutdown();
         }
     };
 
     const retake = () => {
-        document.getElementById('paper').classList.remove('printEffect')
         document.getElementById('paper').classList.add('deleteEffect')
+        document.getElementById('paper').classList.remove('printEffect')
+        
             
         setCapturedImage(null);
         togglePower();
@@ -131,7 +132,7 @@ export default function Camera() {
                 </div>
             </div>
 
-            <div id="paper" className="paper" style={{ display: capturedImage ? "block" : "none" }}>
+            <div id="paper" className="paper">
                 <img id="imageDisplay" src={capturedImage} alt="Captured moment" />
                 <p id="timeStamp"></p>
             </div>
