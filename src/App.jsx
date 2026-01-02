@@ -17,9 +17,12 @@ import './App.css';
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
 
+import RoamMate from './subComponent/roamComponent/roam.jsx'
+import { BrowserRouter,Routes,Route } from 'react-router-dom';
+
 gsap.registerPlugin(ScrollTrigger);
 
-function App() {
+function Main() {
   const greetingList = ["Happy New Year,", "Hello,", "Namaste,", "Hola,", "Bonjour,", "Salaam,"];
 
 
@@ -263,4 +266,16 @@ function App() {
   );
 }
 
-export default App;
+
+
+export default function App(){
+  return(
+    <BrowserRouter>
+      <Routes>
+        <Route  path='/' element={<Main/>}/>
+        <Route  path='/roamMate' element={<RoamMate/>}/>
+        <Route/>
+      </Routes>
+    </BrowserRouter>
+  )
+};

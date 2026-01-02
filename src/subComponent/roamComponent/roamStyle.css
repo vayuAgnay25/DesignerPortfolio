@@ -1,0 +1,708 @@
+/* variable definition */
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap");
+
+:root {
+  --margin-left: 0px;
+  --doc-width: 1528px;
+  --doc-height: 779px;
+  scrollbar-width: none;
+}
+
+* {
+  font-family: "inter";
+  image-rendering: -webkit-optimise-contrast;
+  list-style: none;
+  transition: all 0.5s linear;
+}
+
+#roamMain {
+  overflow: hidden;
+}
+
+.roamPage {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#roamPage1 {
+  margin: 0px !important;
+}
+
+#roamPage1 video {
+  width: 100%;
+  height: auto;
+  border-radius: none;
+}
+
+.roamPage .container {
+  height: 70%;
+  width: 80%;
+}
+
+#roamPage2 .container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+#roamPage2 .container #intro {
+  width: 389px;
+  min-height: 177px;
+  line-height: 22px;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+#roamPage2 .container #intro p {
+  font-weight: 400;
+  font-size: 16px;
+  color: #222222;
+  padding-bottom: 15px;
+}
+
+#roamPage2 .container #small ul {
+  width: 184px;
+  height: fit-content;
+  display: grid;
+  gap: 2px;
+  font-size: 16px;
+  font-family: "Jost";
+}
+
+#roamPage2 .container #small ul li {
+  color: #a6a6a6;
+}
+
+#roamPage2 .container #small ul #li1 {
+  color: black;
+}
+
+#roamPage2 .container #bold {
+  min-height: 176px;
+  width: 475px;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  overflow: hidden;
+
+  font-weight: 600;
+  font-size: 44px;
+  line-height: 44px;
+}
+
+#roamPage3 .container {
+  background-image: url("./assets/roamPG3.png");
+  height: 90%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#roamPage4 .container {
+  display: flex;
+  gap: 130px;
+  padding-top: 100px;
+}
+
+#roamPage4 .container div img {
+  object-fit: cover;
+  width: 50%;
+  height: auto;
+}
+
+#roamPage4 .container div#box1 img {
+  object-fit: unset;
+  width: unset;
+  height: unset;
+}
+
+#roamPage4 .container div#box1 {
+  background-image: url("./assets/rGrid.png");
+  display: flex;
+  flex-direction: column;
+  height: 340px;
+  height: 340px;
+  background-position: center;
+  background-size: contain;
+  justify-content: center;
+}
+
+#roamPage4 .container div#box2,
+#roamPage4 .container div#box3,
+#roamPage4 .container div#box4 {
+  overflow: hidden;
+  height: 238px;
+  width: 238px;
+  border-radius: 60px;
+  display: flex;
+  background-color: #222222;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#roamPage4 .container div#box3 {
+  height: calc(238px / 2);
+  width: calc(238px / 2);
+  border-radius: 30px;
+}
+
+#roamPage4 .container div#box4 {
+  height: calc(238px / 4);
+  width: calc(238px / 4);
+  border-radius: 15px;
+}
+
+#roamPage5 .container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+#roamPage5 .container p#typoColors {
+  font-weight: 600;
+  font-size: 72px;
+  line-height: 74px;
+}
+
+#roamPage5 .container .img{
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: end;
+}
+
+#roamPage5 .container img {
+  width: 448px;
+  height: 209px;
+}
+
+#roamPage5 .container #tamap {
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 44px;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+#roamPage5 .container #tamap li,
+#roamPage5 .container #ABCD li:last-child {
+  overflow: hidden;
+  color: #a6a6a6;
+}
+
+#roamPage5 .container #tamap li:first-child,
+#roamPage5 .container #ABCD li {
+  color: #111111;
+}
+
+#roamPage5 .container .Q2{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+#roamPage5 .container #ABCD {
+  min-height: 92px;
+  width: fit-content;
+  text-align: end;
+}
+
+#roamPage5 .container #ABCD:last-child {
+  font-family: "Jost";
+}
+
+#roamPage6 .container {
+  display: flex;
+  flex-direction: row;
+  height: fit-content;
+  align-items: center;
+}
+
+#roamPage6 .container #image {
+  width: 700px;
+}
+
+#roamPage6 .container #image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+#roamPage6 .container #colorGrid {
+  height: 400px;
+  width: 400px;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  place-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#roamPage6 .container #colorGrid div {
+  height: 100%;
+  width: 100%;
+  border-radius: 40px;
+}
+
+#roamPage6 .container #colorGrid #color1 {
+  background-color: #222222;
+}
+#roamPage6 .container #colorGrid #color2 {
+  background-color: #2b91b7;
+}
+#roamPage6 .container #colorGrid #color3 {
+  background-color: #e05331;
+}
+#roamPage6 .container #colorGrid #color4 {
+  background-color: #bebebe;
+}
+
+#roamPage7 .container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+}
+
+#roamPage7 .container img {
+  width: 500px;
+  height: 100%;
+  object-fit: cover;
+}
+
+#roamPage7 .container #text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#roamPage7 .container #text p {
+  width: 500px;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 1%;
+}
+
+#roamPage7 .container #text #discover h1{
+  font-size: 51px;
+  font-weight: 600;
+  line-height: 62px;
+  letter-spacing: 1%;
+}
+
+#roamPage7 .container #text #discover p{
+  font-size: 40px;
+  line-height: 43px;
+  letter-spacing: 1%;
+  font-weight: 400;
+  color: #a6a6a6;
+  height: fit-content;
+  overflow: hidden;
+  padding-top: 30px;
+}
+
+#roamPage8 .container{
+  background-image: url('./assets/roam91.png');
+}
+
+#roamPage9 .container{
+  display: grid;
+  grid-template-columns: 40% 60%;
+  height: max-content;
+}
+
+#roamPage9 .container #list{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#roamPage9 .container #list #image{
+  background-image: url('./assets/roamP3.png');
+  background-color: #111111;
+  background-size: 40px;
+  border-radius: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 75px;
+  width: 75px;
+}
+
+#roamPage9 .container #list #TBSFA{
+  height: fit-content;
+  width: 500px;
+  text-transform: capitalize;
+  font-size: 50px;
+  font-weight: 500;
+  line-height: 60px;
+  color: #a5a5a5;
+}
+
+#roamPage9 .container #how{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+#roamPage9 .container #how h1{
+  font-size: 51px;
+  line-height: 54px;
+  font-weight: 600;
+  letter-spacing: 1%;
+  height: max-content;
+  overflow: hidden;
+}
+
+#roamPage9 .container #how p{
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 300;
+  letter-spacing: 1%;
+  height: max-content;
+  overflow: hidden;
+}
+
+#roamPage9 .container #how div#image{
+  height: 400px;
+  width: 100%;
+  background-image: url('./assets/roamPage9.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#roamPage10 .container{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: 1fr;
+  gap: 100px;
+}
+
+#roamPage10 .container div{
+  height: 100%;
+  width: 100%;  
+}
+
+#roamPage10 .container div#box1{
+  background-image: url('./assets/roamPage10.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#roamPage10 .container div#box2{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#roamPage10 .container div#box2 div#depth{
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+#roamPage10 .container div#box2 div#depth h1{
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 40px;
+  text-transform: uppercase;
+}
+
+#roamPage10 .container div#box2 div#depth p{
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+#roamPage10 .container div#box2 a{
+  height: fit-content;
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+#roamPage11{
+  margin-top: 100px;
+  height: max-content !important;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+#roamPage11 .container{
+  height: 728px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #fcfcfc;
+}
+
+#C1{background-image: url('./assets/roamPage11_1.png');}
+#C2{background-image: url('./assets/roamPage11_2.png');}
+#C3{background-image: url('./assets/roamPage11_3.png');}
+
+#roamPage12 .container{
+  margin-top: 200px;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-template-rows: 1fr;
+}
+
+#roamPage12 .container #box1{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#roamPage12 .container  #box1 ul{
+  font-size: 40px;
+  line-height: 50px;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: #a5a5a5;
+}
+
+#roamPage12 .container  #box1 ul li{
+  height: 50px;
+  overflow: hidden;
+}
+
+#roamPage12 .container  #box1 ul li:first-child{
+  color:#111111
+}
+
+#roamPage12 .container #box1 #image{
+  background-image: url('./assets/roamP3.png');
+  background-color: #111111;
+  background-size: 40px;
+  border-radius: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 75px;
+  width: 75px;
+}
+
+#roamPage12 .container #box2{
+  background-image: url('./assets/roamPage12.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+#roamPage13 .container{
+  background-image: url('./assets/useCaseRoam.png');
+  background-position: center;
+  background-size: cover;
+background-repeat: no-repeat;
+}
+
+#roamPage14 .container{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: 1fr;
+}
+
+#roamPage14 .container #box1{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#roamPage14 .container #box1 p{
+  width: 500px;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+#roamPage14 .container #box1 p mark{
+  font-weight: 500;
+  background-color: transparent;
+}
+
+#roamPage14 .container #box2{
+  background-image: url('./assets/roamPage14.png');
+  background-position: right;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#roamPage15 .container {
+  display:grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: 1fr;
+  gap:40px;
+}
+
+#roamPage15 .container #box1{
+  background-image: url('./assets/roamPage15.png');
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#roamPage15 .container #box2{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#roamPage15 .container #box2 #paragraph{
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 24px;
+  gap: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+#roamPage15 .container #box2 #paragraph p mark{
+  font-weight: 500;
+  background-color: transparent;
+}
+
+#roamPage15 .container #box2 #yourTruely{
+ display: flex;
+ justify-content: end; 
+}
+
+#roamPage15 .container #box2 #yourTruely ul{
+  font-size: 16px;
+  gap: 2px;
+  display: flex ;
+  flex-direction: column;
+  font-weight: 400;
+  font-family: 'Jost';
+  text-align: end;
+  color: #a5a5a5;
+  text-transform: capitalize;
+}
+
+#roamPage15 .container #box2 #yourTruely ul li:first-child{
+  color: #111111;
+}
+
+#roamPage16 .container {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: 1fr;
+  gap: 10px;
+}
+
+#roamPage16 .container #box1{
+  background-image: url('./assets/roam90.png');
+  background-size: contain;
+  background-position: left;
+  background-color: transparent;
+  background-repeat: no-repeat;
+}
+
+#roamPage16 .container #box2 {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+#roamPage16 .container #box2 #logo #image{
+  height: 75px;
+  width: 75px;
+  background-color: #111111;
+  background-image: url('./assets/roamP3.png');
+  background-size: 50px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 20px;
+  float: right;
+}
+
+#roamPage16 .container #box2 #paragraph{
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+#roamPage16 .container #box2 #paragraph p{
+  width: 500px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 300;
+}
+
+
+#roamPage16 .container #box2 #paragraph p mark{
+  font-weight: 500;
+  background-color: transparent;
+}
+
+#roamPage17 .container{
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: 1fr;
+  gap: 10px;
+}
+
+#roamPage17 .container #box1{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#roamPage17 .container #box1 #paragraph{
+  width: 500px;
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+}
+
+#roamPage17 .container #box1 #paragraph p{
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+#roamPage17 .container #box1 #paragraph p mark{
+  font-weight: 500;
+  background-color: transparent;
+}
+
+#roamPage17 .container #box1 h1{
+  font-size: 51px;
+  line-height: 64px;
+  font-weight: 600px;
+}
+
+#roamPage17 .container #box2{
+  background-image: url('./assets/roamPage17.png');
+  background-size: contain;
+  background-position: right;
+  background-repeat: no-repeat;
+}
+
+#roamPage18 .container{
+  background-image: url('./assets/roamLast.png');
+  height: 90%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/*
+
+gap between img and text - page 16
+shift img left side- page 16
+page 17 - width of text little less
+video quality
+
+*/

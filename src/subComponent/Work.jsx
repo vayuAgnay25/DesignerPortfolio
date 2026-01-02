@@ -10,6 +10,7 @@ import I1 from "../assets/works/memo.png"
 import I2 from "../assets/works/DesignGuideline.png"
 import I3 from "../assets/works/roamMate.png"
 import outerSVG from "../assets/arrow.svg";
+import { Link } from "react-router-dom";
 
 const workCategory = [
     {
@@ -65,7 +66,7 @@ const workCategory = [
             to make exploration effortless. Roamate also guides users with walking, public transport, and <mark>local guidance</mark>, 
             ensuring safe, personalized, and stress-free travel experiences.</span>,
         logo: L4,
-        link: null,
+        link: "roamMate",
         videoSrc: "null",
         imageSrc: I3,
         rdr: " case study",
@@ -78,14 +79,13 @@ const workCategory = [
             It helps teams build faster by reusing components instead of starting from scratch.
             Most importantly, it aligns design and development so the product grows smoothly without breaking the experience.</span>,
         logo: L3,
-        link: "https://www.figma.com/proto/ttC7Bz7NEpTWjdUPe7TJNI/Design-system---Images?page-id=0%3A1&node-id=5-61&viewport=7201%2C7315%2C0.06&t=JNtEx4iYCeLjMyeT-8&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=5%3A61&hide-ui=1",
+        link: "DesignSystem",
         videoSrc: null,
         imageSrc: I2,
         rdr: "design system",
         theme: { backgroundColor: "#f5f5f5", borderColor: "#f5f5f5" }
     }
 ]
-
 
 
 export default function Work() {
@@ -112,7 +112,7 @@ export default function Work() {
                                     <></>
                                 ) : (
                                     (!work.link || work.link.trim() === "") ? (<span className="status-label">Coming soon</span>) :
-                                        (<a href={work.link} target="_blank">
+                                        (<a href={`/${work.link}`} target="_blank" rel="noopener noreferrer">
                                             View {work.rdr} <img src={outerSVG} alt="" />
                                         </a>)
                                 )}
