@@ -1,0 +1,61 @@
+.GalleryGrid {
+  height: max-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(max(300px, (100% - 60px) / 3), 1fr));
+  grid-template-rows: repeat(4, auto);
+  grid-auto-rows: 0;
+  overflow: hidden;
+  gap: 30px;
+}
+
+.GalleryGrid div {
+  border-radius: 40px;
+  overflow: hidden;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+
+.GalleryGrid img {
+  height: 600px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.GalleryGrid div:hover img {
+  transform: scale(1.05);
+  transition: transform 0.5s linear;
+}
+
+#captureLine {
+  display: flex;
+  height: max-content;
+  margin: auto;
+  margin-top: 150px;
+  margin-bottom: 80px;
+  /* background-color: red; */
+}
+
+#captureLine .pGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+#captureLine p {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #c2c2c2;
+  position: relative;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+#captureLine .pGroup p:last-child {
+  color: white;
+  text-transform: none;
+  font-size: medium;
+}

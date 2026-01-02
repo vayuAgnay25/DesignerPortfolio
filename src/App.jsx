@@ -7,7 +7,7 @@ import Story from './subComponent/story.jsx';
 import TimeLine from './subComponent/timeline.jsx';
 import Image from './subComponent/Images.jsx';
 import Work from './subComponent/Work.jsx'
-import Gallery from "./subComponent/Galery.jsx";
+import Gallery from "./subComponent/Gallery.jsx";
 import HoverImages from "./subComponent/HoverImages.jsx"
 import gsap from 'gsap';
 import Camera from './subComponent/Camera.jsx'
