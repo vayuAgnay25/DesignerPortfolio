@@ -123,7 +123,7 @@ export default function RoamMate() {
               <h1>IN depth interviews</h1>
               <p>Understand how tourists discover places & make decisions while navigating a new city, including pain points around trust, safety, and convenience. This helped validate the need for a unified app to improve travel experiences.</p>
             </div>
-            <a id="link">
+            <a href="/userInterview" id="link">
               User interview script
             </a>
           </div>

@@ -276,6 +276,16 @@ function Redirect(){
   </>)
 }
 
+function Redirect2(){
+  useEffect(()=>{
+    window.location.href = "https://docs.google.com/document/d/1vNzXhFLy6IXZqN-bli2muUxo4BAeKRKrFb4t855YyJA/edit?usp=sharing"
+  },[])
+
+  return (<>
+    <h1>Redirecting...</h1>
+  </>)
+}
+
 function Error(){
   window.location.href = "/"
   return(
@@ -294,6 +304,7 @@ export default function App(){
         <Route  path='/' element={<Main/>}/>
         <Route  path='/roamMate' element={<RoamMate/>}/>
         <Route  path= "/designSystem" element={<Redirect/>}/>
+        <Route  path= "/userInterview" element={<Redirect2/>}/>
         <Route  path='/*' element={<Error/>}/>
       </Routes>
     </BrowserRouter>
