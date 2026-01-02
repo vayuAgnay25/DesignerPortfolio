@@ -12,6 +12,12 @@ export default function Camera() {
 
     async function togglePower() {
         if (!powerState) {
+            if (!!capturedImage) {
+                document.getElementById('paper').classList.add('deleteEffect')
+                document.getElementById('paper').classList.remove('printEffect')
+
+                setCapturedImage(null);
+            }
             try {
                 const stream = await navigator.mediaDevices.getUserMedia({ video: true });
                 setCameraStream(stream);
@@ -58,20 +64,19 @@ export default function Camera() {
 
             const imageFile = canvas.toDataURL("image/png");
             setCapturedImage(imageFile);
-            
+
             document.getElementById('paper').classList.add('printEffect')
-            //shutdown();
+            shutdown();
         }
     };
 
     const retake = () => {
         document.getElementById('paper').classList.add('deleteEffect')
         document.getElementById('paper').classList.remove('printEffect')
-        
-            
+
+
         setCapturedImage(null);
         togglePower();
-
     };
 
     const download = async () => {
@@ -116,7 +121,7 @@ export default function Camera() {
             <div className="cameraBody" id="camera">
                 <div className="sensorCategory">
                     <button onClick={togglePower} id="power" aria-label="Power Button">
-                        <span className="led"></span>
+                        {powerState ? <span className="led"></span> : null}
                     </button>
                     <div className="sensor"></div>
                     <button onClick={captureImage} id="capture">tap to capture</button>
@@ -132,7 +137,7 @@ export default function Camera() {
                 </div>
             </div>
 
-            <div id="paper" className="paper">
+            <div id="paper" className={`paper ${capturedImage ? 'printEffect' : 'hidden'}`}>
                 <img id="imageDisplay" src={capturedImage} alt="Captured moment" />
                 <p id="timeStamp"></p>
             </div>
