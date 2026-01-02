@@ -5,7 +5,6 @@ import roamText from './assets/roamText.svg'
 import charLetter from './assets/roamAa1.png'
 import hat from './assets/roamHat.png'
 import P7I1 from './assets/roam88.png'
-import { Link } from 'react-router-dom'
 
 /* [779,1528] window*/
 
