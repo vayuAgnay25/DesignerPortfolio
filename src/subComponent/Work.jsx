@@ -79,7 +79,7 @@ const workCategory = [
             It helps teams build faster by reusing components instead of starting from scratch.
             Most importantly, it aligns design and development so the product grows smoothly without breaking the experience.</span>,
         logo: L3,
-        link: "DesignSystem",
+        link: "designSystem",
         videoSrc: null,
         imageSrc: I2,
         rdr: "design system",

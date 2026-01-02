@@ -266,6 +266,16 @@ function Main() {
   );
 }
 
+function Redirect(){
+  useEffect(()=>{
+    window.location.href = "https://www.figma.com/proto/ttC7Bz7NEpTWjdUPe7TJNI/Design-system---Images?page-id=0%3A1&node-id=5-61&viewport=7201%2C7315%2C0.06&t=JNtEx4iYCeLjMyeT-8&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=5%3A61&hide-ui=1"
+  },[])
+
+  return (<>
+    <h1>Redirecting...</h1>
+  </>)
+}
+
 
 
 export default function App(){
@@ -274,6 +284,7 @@ export default function App(){
       <Routes>
         <Route  path='/' element={<Main/>}/>
         <Route  path='/roamMate' element={<RoamMate/>}/>
+        <Route  path= "/designSystem" element={<Redirect/>}/>
         <Route/>
       </Routes>
     </BrowserRouter>
