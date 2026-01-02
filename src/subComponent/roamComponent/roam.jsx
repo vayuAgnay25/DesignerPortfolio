@@ -1,5 +1,5 @@
 import './roamStyle.css'
-import P1V from './roamAssets/roamcover.mp4'
+import P1V from './roamAssets/roamCover.mp4'
 import P4I2 from './roamAssets/roamP3.png'
 import roamText from './roamAssets/roamText.svg'
 import charLetter from './roamAssets/roamAa1.png'

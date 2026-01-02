@@ -96,7 +96,7 @@
 }
 
 #roamPage3 .container {
-  background-image: url("./assets/roamPG3.png");
+  background-image: url("./roamAssets/roamPG3.png");
   height: 90%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -122,7 +122,7 @@
 }
 
 #roamPage4 .container div#box1 {
-  background-image: url("./assets/rGrid.png");
+  background-image: url("./roamAssets/rGrid.png");
   display: flex;
   flex-direction: column;
   height: 340px;
@@ -311,7 +311,7 @@
 }
 
 #roamPage8 .container{
-  background-image: url('./assets/roam91.png');
+  background-image: url('./roamAssets/roam91.png');
 }
 
 #roamPage9 .container{
@@ -327,7 +327,7 @@
 }
 
 #roamPage9 .container #list #image{
-  background-image: url('./assets/roamP3.png');
+  background-image: url('./roamAssets/roamP3.png');
   background-color: #111111;
   background-size: 40px;
   border-radius: 20px;
@@ -374,7 +374,7 @@
 #roamPage9 .container #how div#image{
   height: 400px;
   width: 100%;
-  background-image: url('./assets/roamPage9.png');
+  background-image: url('./roamAssets/roamPage9.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -393,7 +393,7 @@
 }
 
 #roamPage10 .container div#box1{
-  background-image: url('./assets/roamPage10.png');
+  background-image: url('./roamAssets/roamPage10.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -448,9 +448,9 @@
   background-color: #fcfcfc;
 }
 
-#C1{background-image: url('./assets/roamPage11_1.png');}
-#C2{background-image: url('./assets/roamPage11_2.png');}
-#C3{background-image: url('./assets/roamPage11_3.png');}
+#C1{background-image: url('./roamAssets/roamPage11_1.png');}
+#C2{background-image: url('./roamAssets/roamPage11_2.png');}
+#C3{background-image: url('./roamAssets/roamPage11_3.png');}
 
 #roamPage12 .container{
   margin-top: 200px;
@@ -483,7 +483,7 @@
 }
 
 #roamPage12 .container #box1 #image{
-  background-image: url('./assets/roamP3.png');
+  background-image: url('./roamAssets/roamP3.png');
   background-color: #111111;
   background-size: 40px;
   border-radius: 20px;
@@ -494,14 +494,14 @@
 }
 
 #roamPage12 .container #box2{
-  background-image: url('./assets/roamPage12.png');
+  background-image: url('./roamAssets/roamPage12.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: right;
 }
 
 #roamPage13 .container{
-  background-image: url('./assets/useCaseRoam.png');
+  background-image: url('./roamAssets/useCaseRoam.png');
   background-position: center;
   background-size: cover;
 background-repeat: no-repeat;
@@ -532,7 +532,7 @@ background-repeat: no-repeat;
 }
 
 #roamPage14 .container #box2{
-  background-image: url('./assets/roamPage14.png');
+  background-image: url('./roamAssets/roamPage14.png');
   background-position: right;
   background-size: contain;
   background-repeat: no-repeat;
@@ -546,7 +546,7 @@ background-repeat: no-repeat;
 }
 
 #roamPage15 .container #box1{
-  background-image: url('./assets/roamPage15.png');
+  background-image: url('./roamAssets/roamPage15.png');
   background-position: left;
   background-repeat: no-repeat;
   background-size: contain;
@@ -601,7 +601,7 @@ background-repeat: no-repeat;
 }
 
 #roamPage16 .container #box1{
-  background-image: url('./assets/roam90.png');
+  background-image: url('./roamAssets/roam90.png');
   background-size: contain;
   background-position: left;
   background-color: transparent;
@@ -618,7 +618,7 @@ background-repeat: no-repeat;
   height: 75px;
   width: 75px;
   background-color: #111111;
-  background-image: url('./assets/roamP3.png');
+  background-image: url('./roamAssets/roamP3.png');
   background-size: 50px;
   background-repeat: no-repeat;
   background-position: center;
@@ -684,14 +684,14 @@ background-repeat: no-repeat;
 }
 
 #roamPage17 .container #box2{
-  background-image: url('./assets/roamPage17.png');
+  background-image: url('./roamAssets/roamPage17.png');
   background-size: contain;
   background-position: right;
   background-repeat: no-repeat;
 }
 
 #roamPage18 .container{
-  background-image: url('./assets/roamLast.png');
+  background-image: url('./roamAssets/roamLast.png');
   height: 90%;
   background-position: center;
   background-repeat: no-repeat;
