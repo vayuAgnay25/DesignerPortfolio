@@ -8,7 +8,7 @@
 
 #image0 img{
   rotate: -15deg;
-  transform: translateY(30px);
+  transform: translateY(50px);
   filter: brightness(30%);
 }
 
@@ -50,13 +50,13 @@
 }
 
 #image4 img{
-  rotate: 15deg;
-  transform: translateY(30px);
+  rotate: 25deg;
+  transform: translateY(80px);
   filter: brightness(30%);
 }
 
 #image4 img.active{
-  transform: rotate(-15deg) scale(1); 
+  transform: rotate(-25deg) scale(1); 
   filter: brightness(100%);
 }
 
