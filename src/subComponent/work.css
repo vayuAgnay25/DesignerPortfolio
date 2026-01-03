@@ -111,16 +111,6 @@
   max-height: 90%;
  }
 
- .workDisplay .display:hover video{
-  transform: scale(0.52);
-  transition: all 0.5s linear;
- }
-
-.workDisplay .display:hover img{
-  transform: scale(1.05);
-  transition: all 0.5s linear;
-}
-
 .workDisplay p#workDetails{
   width: 100%;
   height: max-content;

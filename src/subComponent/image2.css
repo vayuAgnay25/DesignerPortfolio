@@ -7,43 +7,57 @@
 }
 
 #image0 img{
-  rotate: -10deg;
+  rotate: -15deg;
+  transform: translateY(30px);
+  filter: brightness(30%);
 }
 
+
 #image0 img.active{
-  transform: rotate(10deg) scale(1); 
+  transform: rotate(15deg) scale(1); 
+  filter: brightness(100%);
 }
 
 #image1 img{
-  rotate: -5deg;
+  rotate: -8deg;
+  filter: brightness(30%);
 }
 
 #image1 img.active{
-  transform: rotate(5deg) scale(1); 
+  transform: rotate(8deg) scale(1); 
+    filter: brightness(100%);
 }
 
 #image2 img{
-  rotate: 2deg;
+  rotate: 4deg;
+  filter: brightness(30%);
 }
 
 #image2 img.active{
-  transform: rotate(-2deg) scale(1); 
+  transform: rotate(-4deg) scale(1); 
+  filter: brightness(100%);
 }
 
 #image3 img{
-  rotate: 7deg;
+  rotate: 12deg;
+  transform: translateY(20px);
+  filter: brightness(30%);
 }
 
 #image3 img.active{
-  transform: rotate(-7deg) scale(1); 
+  transform: rotate(-12deg) scale(1); 
+  filter: brightness(100%);
 }
 
 #image4 img{
-  rotate: 10deg;
+  rotate: 15deg;
+  transform: translateY(30px);
+  filter: brightness(30%);
 }
 
 #image4 img.active{
-  transform: rotate(-10deg) scale(1); 
+  transform: rotate(-15deg) scale(1); 
+  filter: brightness(100%);
 }
 
 .imageBunch .image {
@@ -56,7 +70,7 @@
 }
 
 .imageBunch .image img{
-  width: 300px;
+  width: 360px;
   height: auto;
   object-position: center;
   border-radius: 0px;

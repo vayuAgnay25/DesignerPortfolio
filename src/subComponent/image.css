@@ -10,7 +10,7 @@
 }
 
 #imageGallery div{
-    box-shadow: 0 0 24px #d4d4d4;
+    box-shadow: 0 0 24px #0000001e;
     border-radius: 2px;
     z-index: 1;
     background-color:white;
