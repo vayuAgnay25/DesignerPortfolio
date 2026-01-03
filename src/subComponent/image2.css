@@ -1,6 +1,5 @@
 .imageBunch {
   height: 250px;
-  width: 800px;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   transform: translateY(-50px)
@@ -70,11 +69,18 @@
 }
 
 .imageBunch .image img{
-  width: 360px;
   height: auto;
   object-position: center;
   border-radius: 0px;
   margin-right: -160px;
+  width: 120%;
+  min-width: 200px;
+}
+
+@media (max-width: 720px) {
+    .imageBunch .image:nth-child(n+5) {
+        display: none;
+    }
 }
 
 .imageCollage {
