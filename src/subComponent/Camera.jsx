@@ -160,7 +160,7 @@ export default function Camera() {
                 </div>
 
                 <div id="lens">
-                    <video ref={videoRef} id="videoElement" autoplay playsinline></video>
+                    <video ref={videoRef} id="videoElement" autoPlay playsInline></video>
                 </div>
 
                 <div className="band"></div>

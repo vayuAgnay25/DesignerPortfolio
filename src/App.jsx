@@ -248,15 +248,15 @@ function Main() {
           </button>
           <div className="buttons">
             <a href="" id="link2" className='linkedin'>
-              <img src="" alt="" />
+              <img src={null} alt="" />
               <p>Linkedin</p>
             </a>
             <a href="" id="link3" className='behance'>
-              <img src="" alt="" />
+              <img src={null} alt="" />
               <p>Behance</p>
             </a>
             <a href="" id="link1" className='dribble'>
-              <img src="" alt="" />
+              <img src={null} alt="" />
               <p>Dribble</p>
             </a>
             <a href="" id="link4" className='mail'>

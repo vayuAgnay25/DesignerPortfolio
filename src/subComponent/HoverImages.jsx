@@ -17,7 +17,7 @@ export default function HoverImages() {
             </div>
             <div className="imageBunch">
                 {
-                    imageArr.map((img,idx)=><div id={`image${idx}`} className="image">
+                    imageArr.map((img,idx)=><div key={`image${idx}`} id={`image${idx}`} className="image">
                         <img src={img} 
                             className={`imageCollage ${activeIndex === idx ? "active" : ""}`}
                             onMouseEnter={() => setActiveIndex(idx)}

@@ -26,7 +26,7 @@ export default function Gallery() {
             </div>
             <div className="GalleryGrid">
                 {
-                    imageList.map((image) => <div><img src={image} /></div>)
+                    imageList.map((image, idx) => <div key={`galleryImage${idx}`}><img src={image} /></div>)
                 }
             </div>
         </>

@@ -97,9 +97,9 @@ export default function Work() {
 
             <div className="workDisplay">
                 {
-                    workCategory.map((work) => {
+                    workCategory.map((work, idx) => {
                         return (
-                            <div className="work">
+                            <div key={`work${idx}`} className="work">
                                 <div className="displayLine">
                                     <div id="workTitle"><img src={work.logo} /> <p>{work.title}</p></div>
                                     <p className={work.rdr}>{work.rdr}</p>
