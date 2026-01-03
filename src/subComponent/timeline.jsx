@@ -10,17 +10,17 @@ const TimelineData = [
     {
         year: "2020",
         title: "Started Design Career",
-        description: "Started my career as a visual designer, but after working on UX processes for an internal tool, I discovered my passion for turning research and ideas into meaningful product experiences"
+        description: "Started my career as a visual designer, but after working on UX process for an internal tool, I discovered my passion for turning research and ideas into meaningful product experiences."
     },
     {
         year: "2021",
         title: "Professional Opportunity",
-        description: "Worked as a Designer with Internshala and Utilize Core, collaborating closely with engineers and PMs for smooth delivery and pixel-perfect designs, along with contributing to the design system."
+        description: "Worked as a designer with Internshala and Utilize Core, collaborating closely with engineers and PMs for smooth delivery and pixel-perfect designs, along with contributing to the design system."
     },
     {
         year: "2022",
         title: "Collaboration with International Clients",
-        description: "Currently working here since 2022 as Sr. Designer. Collaborated directly with global clients like Microsoft, PepsiCo, Staples, and Wolters Kluwer."
+        description: "Currently working here since 2022 as UX Designer. Collaborated directly with global clients like Microsoft, PepsiCo, Staples, and Wolters Kluwer."
     }
 ];
 

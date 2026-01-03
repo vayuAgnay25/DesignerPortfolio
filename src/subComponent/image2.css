@@ -11,7 +11,7 @@
 }
 
 #image0 img.active{
-  transform: rotate(10deg) scale(1.5); 
+  transform: rotate(10deg) scale(1); 
 }
 
 #image1 img{
@@ -19,7 +19,7 @@
 }
 
 #image1 img.active{
-  transform: rotate(5deg) scale(1.5); 
+  transform: rotate(5deg) scale(1); 
 }
 
 #image2 img{
@@ -27,7 +27,7 @@
 }
 
 #image2 img.active{
-  transform: rotate(-2deg) scale(1.5); 
+  transform: rotate(-2deg) scale(1); 
 }
 
 #image3 img{
@@ -35,7 +35,7 @@
 }
 
 #image3 img.active{
-  transform: rotate(-7deg) scale(1.5); 
+  transform: rotate(-7deg) scale(1); 
 }
 
 #image4 img{
@@ -43,7 +43,7 @@
 }
 
 #image4 img.active{
-  transform: rotate(-10deg) scale(1.5); 
+  transform: rotate(-10deg) scale(1); 
 }
 
 .imageBunch .image {
@@ -56,7 +56,7 @@
 }
 
 .imageBunch .image img{
-  width: 250px;
+  width: 300px;
   height: auto;
   object-position: center;
   border-radius: 0px;

@@ -11,9 +11,7 @@
    border-left-style: solid;
    border-color: #e5e5e5;
    border-width: 2px;
-   padding-left: 20px;
-   padding-bottom: 10px;
-   padding-top: 10px;
+   padding-left: 40px;
 }
 
 .relative .timeStage .year{
@@ -21,7 +19,7 @@
     left: -7vh;
     top: 15%;
     color: #888888;
-    font-size: 12px;
+    font-size: 14px;
 
 }
 
@@ -36,21 +34,22 @@
 }
 
 .relative .timeStage .box .content h3{
-    padding-bottom: 8px;
-    font-size: 16px;
+    padding-bottom: 12px;
+    font-size: 18px;
     color: #222;
     font-weight: 500;
 }
 
 .relative .timeStage .box .content p{
-    padding-bottom: 8px;
-    font-size: 14px;
+    padding-bottom: 16px;
+    font-size: 16px;
     color: #555;
     font-weight: 400;
-    text-transform: capitalize;
+    text-transform: none;
     line-height: 24px;
 }
 
 .relative .timeStage .box .content {
-    width: 540px;
+    width: 650px;
+    transform: translateY(-27px);
 }

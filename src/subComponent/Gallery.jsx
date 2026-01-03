@@ -21,7 +21,7 @@ export default function Gallery() {
             <div id="captureLine">
                 <div className="pGroup">
                     <p>captures</p>
-                    <p>And also, I love photography</p>
+                    <p>And also, I love travelling & photography</p>
                 </div>
             </div>
             <div className="GalleryGrid">

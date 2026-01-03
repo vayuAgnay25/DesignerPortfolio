@@ -3,7 +3,7 @@
     height: 300px;
     width: 1100px;
     /* margin-left: -29%; */
-    margin-top: 15%;
+    margin-top: 10%;
     grid-template-columns: repeat(4,1fr);
     gap: 60px;
     /* scale: 60%; */

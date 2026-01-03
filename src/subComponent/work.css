@@ -126,7 +126,8 @@
   height: max-content;
   text-align: start;
   margin-top: 40px;
-  line-height: 24px;
+  line-height: 28px;
+  font-size: 18px;
 }
 
 .workDisplay p#workDetails mark{

@@ -25,7 +25,7 @@
 .sliding-window {
   height: 60px; /* Ek line ki height */
   overflow: hidden;
-  margin-top: 30px;
+  margin-top: 50px;
 }
 
 .sliding-list {
@@ -130,7 +130,7 @@
   gap: 10px;
   align-items: center; /* fix: place-content center ki jagah align-items */
   width: max-content;
-  padding: 5px 10px;
+  padding: 5px 5px;
 }
 
 #nav #time p {
@@ -183,6 +183,8 @@
   align-items: center;
   text-transform: capitalize;
   font-size: 14px;
+  padding-left: 10px;
+  padding-right: 5px;
 }
 
 #nav #GIT a {
@@ -237,7 +239,7 @@
 /* Content Page 1 */
 #page1 .layer .paragraph {
   max-height: 500px;
-  width: 500px;
+  width: 540px;
   position: relative;
   float: left;
   top: 20%;
@@ -252,20 +254,21 @@
   color: #484848;
   cursor: default;
 }
+
 #page1 .layer .paragraph p:last-child {
   font-family: 'caveat';
   font-weight: 600;
   color: #fcbf49 ;
   font-size: 40px;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 #page1 .layer .paragraph h1 {
   letter-spacing: -0.5px;
-  font-size: 100px;
+  font-size: 120px;
   font-family: 'League Spartan';
-  margin-bottom: 40px;
-  margin-top: 80px;
+  margin-bottom: 10px;
+  margin-top: 20px;
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -314,10 +317,6 @@ img#rainyProfile{
 
   #page1 .layer .paragraph p {
     width: 300px;
-  }
-
-  #page1 .layer .paragraph h1 {
-    font-size: 50px;
   }
 
   img#rainyProfile {
@@ -445,7 +444,7 @@ img#rainyProfile{
   width: 580px;
   margin: auto;
   text-align: center;
-  line-height: 28px;
+  line-height: 32px;
   padding-top: 50px;
   font-family: 'inter';
   text-transform: none;

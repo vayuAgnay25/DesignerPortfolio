@@ -26,8 +26,8 @@
   justify-content: center;
   flex-wrap: nowrap;
   transition: all 0.1s linear;
-  margin-top: 50%;
-  padding-bottom: 50%;
+  margin-top: 10%;
+  padding-bottom: 30%;
 }
 
 #lens {
@@ -218,7 +218,7 @@ p#timeStamp {
 h6 {
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 10%;
+  margin-bottom: 40px;
   margin-top: 60px;
   width: 350px;
   font-weight: 500;

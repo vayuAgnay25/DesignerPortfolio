@@ -1,18 +1,32 @@
 import './cameraStyle.css'
 import { useState, useRef } from 'react'
 import html2canvas from 'html2canvas';
-
+const months = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sept",
+  "Oct",
+  "Nov",
+  "Dec",
+];
 
 export default function Camera() {
     const [powerState, setPowerState] = useState(false);
     const [cameraStreams, setCameraStream] = useState(null);
     const [capturedImage, setCapturedImage] = useState(null);
+    const [LocalDate, setLocalDate] = useState(null);
 
     const videoRef = useRef(null); // Video element ko access karne ke liye
 
     async function togglePower() {
         if (!powerState) {
-            if (!!capturedImage) {
+            if (!capturedImage) {
                 document.getElementById('paper').classList.add('deleteEffect')
                 document.getElementById('paper').classList.remove('printEffect')
 
@@ -51,6 +65,22 @@ export default function Camera() {
 
     const imageRef = useRef();
 
+    const formatTime = () => {
+        const now = new Date();
+        const day = now.getDate();
+        const month = months[now.getMonth()];
+        const year = now.getFullYear();
+
+        let hours = now.getHours();
+        const minutes = now.getMinutes().toString().padStart(2, "0");
+        const ampm = hours >= 12 ? "PM" : "AM";
+
+        hours = hours % 12 || 12; // Convert to 12h format
+        const formattedHours = hours.toString().padStart(2, "0");
+
+        return `${month} ${day}, ${year} ${formattedHours}:${minutes} ${ampm}`;
+    };
+
     const captureImage = () => {
 
         if (powerState && videoRef.current && videoRef.current.readyState === 4) {
@@ -63,8 +93,9 @@ export default function Camera() {
             ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
 
             const imageFile = canvas.toDataURL("image/png");
+            
             setCapturedImage(imageFile);
-
+            setLocalDate(formatTime)
             document.getElementById('paper').classList.add('printEffect')
             shutdown();
         }
@@ -74,7 +105,7 @@ export default function Camera() {
         document.getElementById('paper').classList.add('deleteEffect')
         document.getElementById('paper').classList.remove('printEffect')
 
-
+        setLocalDate(null);
         setCapturedImage(null);
         togglePower();
     };
@@ -112,6 +143,7 @@ export default function Camera() {
             console.error("Snapshot failed:", error);
         } finally {
             document.body.removeChild(clone);
+            setLocalDate(null);
         }
     };
 
@@ -139,7 +171,7 @@ export default function Camera() {
 
             <div id="paper" className={`paper ${capturedImage ? 'printEffect' : 'hidden'}`}>
                 <img id="imageDisplay" src={capturedImage} alt="Captured moment" />
-                <p id="timeStamp"></p>
+                <p id="timeStamp">{LocalDate}</p>
             </div>
 
             <div style={{ display: capturedImage ? "grid" : "none" }} className="buttons">
