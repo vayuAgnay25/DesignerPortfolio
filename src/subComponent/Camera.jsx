@@ -26,7 +26,7 @@ export default function Camera() {
 
     async function togglePower() {
         if (!powerState) {
-            if (!capturedImage) {
+            if (!!capturedImage) {
                 document.getElementById('paper').classList.add('deleteEffect')
                 document.getElementById('paper').classList.remove('printEffect')
 
