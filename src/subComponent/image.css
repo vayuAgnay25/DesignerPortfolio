@@ -1,12 +1,19 @@
 #imageGallery{
     display: grid;
-    height: 300px;
-    width: 1100px;
+    height: auto;
+    width: 100%;
     /* margin-left: -29%; */
     margin-top: 10%;
     grid-template-columns: repeat(4,1fr);
     gap: 60px;
     /* scale: 60%; */
+    max-width: 1100px;
+}
+
+@media (max-width: 990px) {
+    #imageGallery{
+        display: none;
+    }
 }
 
 #imageGallery div{
@@ -46,12 +53,4 @@
 
 #imageGallery div#card4{
     transform: rotate(3.5deg) translateX(-80px);
-}
-
-@media (max-width: 990px) {
-    #imageGallery{
-        width: 100%;
-        height: auto;
-        /* grid-template-columns: repeat(2,1fr); */
-    }
 }

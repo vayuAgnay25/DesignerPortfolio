@@ -46,6 +46,12 @@
   height: 60px;
 }
 
+@media (max-width: 720px) {
+  .greeting {
+    font-size: 40px;
+  }
+}
+
 .static-heading {
   font-size: 8rem;
   font-weight: 900;
@@ -257,7 +263,7 @@
   position: relative;
   float: left;
   top: 20%;
-  left: 10%;
+  left: 12%;
 }
 
 #page1 .layer .paragraph p {
@@ -288,26 +294,32 @@
   width: 100%;
 }
 
+@media (max-width: 720px){ 
+  #page1 .layer .paragraph h1 {
+    font-size: 80px;
+  }
+}
+
 img#rainyProfile{
   height: auto;
   width: 400px;
   float: right;
   position: relative;
-  right: 15%;
+  right: 10%;
   top: 20%;
   margin-bottom: 100px;
 }
 
-@media (max-width: 1000px){
+@media (max-width: 1200px){
   img#rainyProfile{
-    top: 50%;
+    display: none;
   }
 }
 
 @media (max-width: 720px) {
   #page1 .layer .paragraph {
     width: 400px;
-    left: 5%;
+    left: 8%;
   }
 
   #page1 .layer .paragraph p {
@@ -315,28 +327,16 @@ img#rainyProfile{
     font-weight: 500;
     line-height: 30px;
   }
-
-  img#rainyProfile {
-    width: 350px;
-    right: 5%;
-    top: 30%;
-  }
 }
 
-@media (max-width: 340px) {
+@media (max-width: 390px) {
   #page1 .layer .paragraph {
     width: 300px;
-    left: 2%;
+    left: 5%;
   }
 
   #page1 .layer .paragraph p {
     width: 300px;
-  }
-
-  img#rainyProfile {
-    width: 250px;
-    right: 2%;
-    top: 35%;
   }
 }
 
