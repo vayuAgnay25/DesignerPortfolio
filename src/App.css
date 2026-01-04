@@ -133,7 +133,7 @@
   border: 1px solid #ededed;
   border-radius: 100px;
   padding: 12px;
-  width: 500px;
+  max-width: 500px;
   position: fixed;
   top: 20px;
   left: 50%;
@@ -614,4 +614,22 @@ min-height: 120vw;
 #main{
   background-color: var(--bg-color,"ffffff");
   display: grid;
+}
+
+/* Specific class use karna behtar hai */
+.reveal {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%; /* Optional: Controls when animation starts/ends */
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Thoda movement add karne ke liye */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
