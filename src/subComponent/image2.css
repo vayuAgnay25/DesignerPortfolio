@@ -6,56 +6,53 @@
 }
 
 #image0 img{
-  rotate: -15deg;
-  transform: translateY(50px);
+  transform: rotate(-15deg) translateY(50px);
   filter: brightness(30%);
 }
 
 
 #image0 img.active{
-  transform: rotate(15deg) scale(1); 
+  transform: rotate(0deg) scale(1); 
   filter: brightness(100%);
 }
 
 #image1 img{
-  rotate: -8deg;
+  transform: rotate(-8deg) translateY(20px);
   filter: brightness(30%);
 }
 
 #image1 img.active{
-  transform: rotate(8deg) scale(1); 
+  transform: rotate(0deg) scale(1); 
     filter: brightness(100%);
 }
 
 #image2 img{
-  rotate: 4deg;
+  transform: rotate(6deg);
   filter: brightness(30%);
 }
 
 #image2 img.active{
-  transform: rotate(-4deg) scale(1); 
+  transform: rotate(0deg) scale(1); 
   filter: brightness(100%);
 }
 
 #image3 img{
-  rotate: 12deg;
-  transform: translateY(20px);
+  transform: rotate(15deg) translateY(30px);
   filter: brightness(30%);
 }
 
 #image3 img.active{
-  transform: rotate(-12deg) scale(1); 
+  transform: rotate(0deg) scale(1); 
   filter: brightness(100%);
 }
 
 #image4 img{
-  rotate: 25deg;
-  transform: translateY(80px);
+  transform: rotate(25deg) translateY(100px);
   filter: brightness(30%);
 }
 
 #image4 img.active{
-  transform: rotate(-25deg) scale(1); 
+  transform: rotate(0deg) scale(1); 
   filter: brightness(100%);
 }
 
