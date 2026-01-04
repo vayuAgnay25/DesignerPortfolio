@@ -100,14 +100,14 @@ export default function Work() {
                     workCategory.map((work, idx) => {
                         return (
                             <div key={`work${idx}`} className="work">
-                                <div className="displayLine">
-                                    <div id="workTitle"><img src={work.logo} /> <p>{work.title}</p></div>
-                                    <p className={work.rdr}>{work.rdr}</p>
+                                <div className=" displayLine">
+                                    <div id="workTitle"><img src={work.logo} /> <p className="reveal">{work.title}</p></div>
+                                    <p className={`reveal ${work.rdr}`}>{work.rdr}</p>
                                 </div>
-                                <div className="display" style={{ backgroundColor: work.theme.backgroundColor }}>
+                                <div className=" display" style={{ backgroundColor: work.theme.backgroundColor }}>
                                     {work.type == "UI" ? <video style={{ borderColor: work.theme.borderColor }} autoPlay loop muted playsInline type="video/mp4" src={work.videoSrc} /> : <img src={work.imageSrc} />}
                                 </div>
-                                <p id="workDetails">{work.paragraph}</p>
+                                <p className="reveal" id="workDetails">{work.paragraph}</p>
                                 {(work.type === "UI") ? (
                                     <></>
                                 ) : (

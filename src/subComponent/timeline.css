@@ -50,6 +50,6 @@
 }
 
 .relative .timeStage .box .content {
-    width: 650px;
+    max-width: 650px;
     transform: translateY(-27px);
 }

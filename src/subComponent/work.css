@@ -31,7 +31,7 @@
 
 .workDisplay .displayLine div#workTitle p{
   font-size: 22px;
-  width:700px;
+  max-width:700px;
 }
 
 .workDisplay .displayLine div#workTitle img{
