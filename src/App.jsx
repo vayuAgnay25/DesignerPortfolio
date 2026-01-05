@@ -18,7 +18,7 @@ import './App.css';
 import { motion } from 'framer-motion';
 
 import RoamMate from './subComponent/roamComponent/roam.jsx'
-import { BrowserRouter,Routes,Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -67,7 +67,28 @@ function Main() {
     });
   });
 
+  /* insert all useEffects here */
+  useEffect(() => {
+    const targets = ['.dive-title','.keep-title','.keep-title-2'];
 
+    targets.forEach((section) => {
+      const el = document.querySelector(section);
+
+      const io = new IntersectionObserver(([entry]) => {
+        if (entry.intersectionRatio >= 0.2) {
+          el.classList.add("positive");
+          el.classList.remove("negative");
+          // io.disconnect();
+        }
+        else {
+          el.classList.remove("positive");
+          el.classList.add("negative");
+        }
+      }, { threshold: [0.2, 0.6] });
+
+      io.observe(el);
+    });
+  }, []);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -195,10 +216,13 @@ function Main() {
         ref={addtoRefs}
       >
         <div className="dive-deep">
-          <h1>
+          <h1 className="dive-title" >
             <span>Sometimes,</span>
+            <span>&nbsp;</span>
             <span>I</span>
+            <span>&nbsp;</span>
             <span>dive</span>
+            <span>&nbsp;</span>
             <span>deep.</span>
           </h1>
           <p>
@@ -208,7 +232,7 @@ function Main() {
       </motion.div>
       <div id="page5" className=" pageBunch">
         <div className="keep-simple">
-          <h1>
+          <h1 className='keep-title'>
             <span>And</span>
             <span>then,</span>
             <span>I</span>
@@ -216,7 +240,7 @@ function Main() {
             <span>try</span>
             <span>to</span>
           </h1>
-          <h2>
+          <h2 className='keep-title-2'>
             <span>Keep</span>
             <span>it</span>
             <span>simple.</span>
@@ -272,29 +296,29 @@ function Main() {
   );
 }
 
-function Redirect(){
-  useEffect(()=>{
+function Redirect() {
+  useEffect(() => {
     window.location.href = "https://www.figma.com/proto/ttC7Bz7NEpTWjdUPe7TJNI/Design-system---Images?page-id=0%3A1&node-id=5-61&viewport=7201%2C7315%2C0.06&t=JNtEx4iYCeLjMyeT-8&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=5%3A61&hide-ui=1"
-  },[])
+  }, [])
 
   return (<>
     <h1>Redirecting...</h1>
   </>)
 }
 
-function Redirect2(){
-  useEffect(()=>{
+function Redirect2() {
+  useEffect(() => {
     window.location.href = "https://docs.google.com/document/d/1vNzXhFLy6IXZqN-bli2muUxo4BAeKRKrFb4t855YyJA/edit?usp=sharing"
-  },[])
+  }, [])
 
   return (<>
     <h1>Redirecting...</h1>
   </>)
 }
 
-function Error(){
+function Error() {
   window.location.href = "/"
-  return(
+  return (
     <>
       <h1>page not found</h1>
     </>
@@ -303,15 +327,15 @@ function Error(){
 
 
 
-export default function App(){
-  return(
+export default function App() {
+  return (
     <BrowserRouter>
       <Routes>
-        <Route  path='/' element={<Main/>}/>
-        <Route  path='/roamMate' element={<RoamMate/>}/>
-        <Route  path= "/designSystem" element={<Redirect/>}/>
-        <Route  path= "/userInterview" element={<Redirect2/>}/>
-        <Route  path='/*' element={<Error/>}/>
+        <Route path='/' element={<Main />} />
+        <Route path='/roamMate' element={<RoamMate />} />
+        <Route path="/designSystem" element={<Redirect />} />
+        <Route path="/userInterview" element={<Redirect2 />} />
+        <Route path='/*' element={<Error />} />
       </Routes>
     </BrowserRouter>
   )

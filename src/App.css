@@ -633,3 +633,74 @@ min-height: 120vw;
     transform: translateY(0);
   }
 }
+
+.dive-title {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.dive-title span, .keep-title-2 span, .keep-title span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.dive-title.positive{
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.dive-title.positive span, .keep-title.positive span, .keep-title-2.positive span {
+  animation: rise 0.5s ease forwards;
+  animation-delay: 2s;
+}
+
+.dive-title.negative span, .keep-title.negative span, .keep-title-2.negative span {
+  animation: dawn 0.5s ease forwards;
+}
+
+.dive-title.positive span:nth-child(1), .dive-title.negative span:nth-child(1){ animation-delay: 0.05s; }
+.dive-title.positive span:nth-child(2), .dive-title.negative span:nth-child(2){ animation-delay: 0.1s; }
+.dive-title.positive span:nth-child(3), .dive-title.negative span:nth-child(3){ animation-delay: 0.15s; }
+.dive-title.positive span:nth-child(4), .dive-title.negative span:nth-child(4){ animation-delay: 0.2s; }
+.dive-title.positive span:nth-child(5), .dive-title.negative span:nth-child(5){ animation-delay: 0.25s; }
+.dive-title.positive span:nth-child(6), .dive-title.negative span:nth-child(6){ animation-delay: 0.3s; }
+.dive-title.positive span:nth-child(7), .dive-title.negative span:nth-child(7){ animation-delay: 0.35s; }
+
+.keep-title.positive span:nth-child(1), .keep-title.negative span:nth-child(1){ animation-delay: 0.05s; }
+.keep-title.positive span:nth-child(2), .keep-title.negative span:nth-child(2){ animation-delay: 0.1s; }
+.keep-title.positive span:nth-child(3), .keep-title.negative span:nth-child(3){ animation-delay: 0.15s; }
+.keep-title.positive span:nth-child(4), .keep-title.negative span:nth-child(4){ animation-delay: 0.2s; }
+.keep-title.positive span:nth-child(5), .keep-title.negative span:nth-child(5){ animation-delay: 0.25s; }
+.keep-title.positive span:nth-child(6), .keep-title.negative span:nth-child(6){ animation-delay: 0.3s; }
+.keep-title.positive span:nth-child(7), .keep-title.negative span:nth-child(7){ animation-delay: 0.35s; }
+
+.keep-title-2.positive span:nth-child(1), .keep-title-2.negative span:nth-child(1){ animation-delay: 0.05s; }
+.keep-title-2.positive span:nth-child(2), .keep-title-2.negative span:nth-child(2){ animation-delay: 0.1s; }
+.keep-title-2.positive span:nth-child(3), .keep-title-2.negative span:nth-child(3){ animation-delay: 0.15s; }
+.keep-title-2.positive span:nth-child(4), .keep-title-2.negative span:nth-child(4){ animation-delay: 0.2s; }
+.keep-title-2.positive span:nth-child(5), .keep-title-2.negative span:nth-child(5){ animation-delay: 0.25s; }
+.keep-title-2.positive span:nth-child(6), .keep-title-2.negative span:nth-child(6){ animation-delay: 0.3s; }
+.keep-title-2.positive span:nth-child(7), .keep-title-2.negative span:nth-child(7){ animation-delay: 0.35s; }
+
+
+@keyframes rise {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes dawn {
+  from {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
