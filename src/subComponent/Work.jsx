@@ -60,7 +60,7 @@ const workCategory = [
     },
     {
         type: "UX",
-        title: "Roammate - Travel assistant App",
+        title: "Roammate - Travel Assistant App",
         paragraph: <span>Roamate is a smart,<mark> AI-powered </mark> travel companion that helps tourists discover nearby places, cafés, 
             adventures, and stays—all in one app. It combines interactive maps with <mark>real-time</mark> crowd, safety, and distance insights 
             to make exploration effortless. Roamate also guides users with walking, public transport, and <mark>local guidance</mark>, 
@@ -92,7 +92,7 @@ export default function Work() {
     return (
         <>
             <div className="workLine">
-                <p>Selected work</p>
+                <p><span>Selected</span> <span>work</span></p>
             </div>
 
             <div className="workDisplay">
@@ -101,7 +101,9 @@ export default function Work() {
                         return (
                             <div key={`work${idx}`} className="work">
                                 <div className=" displayLine">
-                                    <div id="workTitle"><img src={work.logo} /> <p>{work.title}</p></div>
+                                    <div id="workTitle"><img src={work.logo} /> <p className="animate">{work.title.split(" ").map((el)=>{
+                                        return <span>{el}</span>
+                                    })}</p></div>
                                     <p className={` ${work.rdr}`}>{work.rdr}</p>
                                 </div>
                                 <div className=" display" style={{ backgroundColor: work.theme.backgroundColor }}>

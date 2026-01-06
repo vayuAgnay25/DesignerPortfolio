@@ -69,25 +69,35 @@ function Main() {
 
   /* insert all useEffects here */
   useEffect(() => {
-    const targets = ['.dive-title','.keep-title','.keep-title-2'];
+    // Saare target classes ki list
+    const selectors = ['.dive-title', '.keep-title', '.keep-title-2', '.glanceTitle', '.animate', '.reveal'];
+    const allObservers = [];
 
-    targets.forEach((section) => {
-      const el = document.querySelector(section);
+    // Sabhi selectors par loop chalayein
+    selectors.forEach((selector) => {
+      // querySelectorAll use karein taaki loop ke saare elements mil sakein
+      const elements = document.querySelectorAll(selector);
 
-      const io = new IntersectionObserver(([entry]) => {
-        if (entry.intersectionRatio >= 0.2) {
-          el.classList.add("positive");
-          el.classList.remove("negative");
-          // io.disconnect();
-        }
-        else {
-          el.classList.remove("positive");
-          el.classList.add("negative");
-        }
-      }, { threshold: [0.2, 0.6] });
+      elements.forEach((el) => {
+        const io = new IntersectionObserver(([entry]) => {
+          if (entry.isIntersecting) {
+            el.classList.add("positive");
+            el.classList.remove("negative");
+          } else {
+            el.classList.remove("positive");
+            el.classList.add("negative");
+          }
+        }, { threshold: 0.2 });
 
-      io.observe(el);
+        io.observe(el);
+        allObservers.push(io);
+      });
     });
+
+    // Cleanup: Jab component unmount ho toh observers ko band karein
+    return () => {
+      allObservers.forEach(io => io.disconnect());
+    };
   }, []);
 
   useEffect(() => {
@@ -218,11 +228,11 @@ function Main() {
         <div className="dive-deep">
           <h1 className="dive-title" >
             <span>Sometimes,</span>
-            <span>&nbsp;</span>
+            {/* <span>&nbsp;</span> */}
             <span>I</span>
-            <span>&nbsp;</span>
+            {/* <span>&nbsp;</span> */}
             <span>dive</span>
-            <span>&nbsp;</span>
+            {/* <span>&nbsp;</span> */}
             <span>deep.</span>
           </h1>
           <p>
@@ -317,7 +327,9 @@ function Redirect2() {
 }
 
 function Error() {
-  window.location.href = "/"
+  const redirectTo = document.createElement('a');
+  redirectTo.href = '/';
+  redirectTo.click();
   return (
     <>
       <h1>page not found</h1>

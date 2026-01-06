@@ -92,8 +92,8 @@
   padding-left: 12%;
   padding-right: 12%;
   box-sizing: border-box;
-  backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 @media (max-width: 720px) {
@@ -641,7 +641,7 @@ min-height: 120vw;
   overflow: hidden;
 }
 
-.dive-title span, .keep-title-2 span, .keep-title span {
+.dive-title span, .keep-title-2 span, .keep-title span, .glanceTitle span, .animate span {
   display: inline-block;
   opacity: 0;
   transform: translateY(20px);
@@ -653,12 +653,12 @@ min-height: 120vw;
   box-shadow: none !important;
 }
 
-.dive-title.positive span, .keep-title.positive span, .keep-title-2.positive span {
+.dive-title.positive span, .keep-title.positive span, .keep-title-2.positive span, .glanceTitle.positive span,.animate.positive span{
   animation: rise 0.5s ease forwards;
   animation-delay: 2s;
 }
 
-.dive-title.negative span, .keep-title.negative span, .keep-title-2.negative span {
+.dive-title.negative span, .keep-title.negative span, .keep-title-2.negative span, .glanceTitle.negative span,.animate.negative span{
   animation: dawn 0.5s ease forwards;
 }
 
@@ -685,6 +685,23 @@ min-height: 120vw;
 .keep-title-2.positive span:nth-child(5), .keep-title-2.negative span:nth-child(5){ animation-delay: 0.25s; }
 .keep-title-2.positive span:nth-child(6), .keep-title-2.negative span:nth-child(6){ animation-delay: 0.3s; }
 .keep-title-2.positive span:nth-child(7), .keep-title-2.negative span:nth-child(7){ animation-delay: 0.35s; }
+
+.glanceTitle.positive span:nth-child(1), .glanceTitle.negative span:nth-child(1){ animation-delay: 0.05s; }
+.glanceTitle.positive span:nth-child(2), .glanceTitle.negative span:nth-child(2){ animation-delay: 0.1s; }
+.glanceTitle.positive span:nth-child(3), .glanceTitle.negative span:nth-child(3){ animation-delay: 0.15s; }
+.glanceTitle.positive span:nth-child(4), .glanceTitle.negative span:nth-child(4){ animation-delay: 0.2s; }
+.glanceTitle.positive span:nth-child(5), .glanceTitle.negative span:nth-child(5){ animation-delay: 0.25s; }
+.glanceTitle.positive span:nth-child(6), .glanceTitle.negative span:nth-child(6){ animation-delay: 0.3s; }
+.glanceTitle.positive span:nth-child(7), .glanceTitle.negative span:nth-child(7){ animation-delay: 0.35s; }
+
+.animate.positive span:nth-child(1), .animate.negative span:nth-child(1){ animation-delay: 0.05s; }
+.animate.positive span:nth-child(2), .animate.negative span:nth-child(2){ animation-delay: 0.1s; }
+.animate.positive span:nth-child(3), .animate.negative span:nth-child(3){ animation-delay: 0.15s; }
+.animate.positive span:nth-child(4), .animate.negative span:nth-child(4){ animation-delay: 0.2s; }
+.animate.positive span:nth-child(5), .animate.negative span:nth-child(5){ animation-delay: 0.25s; }
+.animate.positive span:nth-child(6), .animate.negative span:nth-child(6){ animation-delay: 0.3s; }
+.animate.positive span:nth-child(7), .animate.negative span:nth-child(7){ animation-delay: 0.35s; }
+
 
 
 @keyframes rise {

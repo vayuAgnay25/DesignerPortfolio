@@ -13,7 +13,7 @@ export default function HoverImages() {
     return (
         <>
             <div className="GlanceLine">
-                <p>Quick Glance</p>
+                <p className="glanceTitle"><span>Quick</span> <span>Glance</span></p>
             </div>
             <div className="imageBunch">
                 {
