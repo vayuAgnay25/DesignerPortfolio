@@ -101,7 +101,7 @@ const workCategory = [
         videoSrc: null,
         imageSrc: I4,
         rdr: "SaaS Tool",
-        theme: { backgroundColor: "#f5f5f5", borderColor: "#f5f5f5" }
+        theme: { backgroundColor: "#ffffff", borderColor: "#f5f5f5" }
     },
     {
         type: "UX",
@@ -115,7 +115,7 @@ const workCategory = [
         videoSrc: null,
         imageSrc: I5,
         rdr: "SaaS Tool",
-        theme: { backgroundColor: "#f5f5f5", borderColor: "#f5f5f5" }
+        theme: { backgroundColor: "#ffffff", borderColor: "#f5f5f5" }
     }
 ]
 
@@ -139,7 +139,7 @@ export default function Work() {
                                     <p className={` ${work.rdr}`}>{work.rdr}</p>
                                 </div>
                                 <div className=" display" style={{ backgroundColor: work.theme.backgroundColor }}>
-                                    {work.type == "UI" ? <video style={{ borderColor: work.theme.borderColor }} autoPlay loop muted playsInline type="video/mp4" src={work.videoSrc} /> : <img src={work.imageSrc} />}
+                                    {work.type == "UI" ? <video style={{ borderColor: work.theme.borderColor }} autoPlay loop muted playsInline type="video/mp4" src={work.videoSrc} /> : <img  src={work.imageSrc} />}
                                 </div>
                                 <p className="reveal" id="workDetails">{work.paragraph}</p>
                                 {(work.type === "UI") ? (
