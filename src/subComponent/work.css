@@ -107,7 +107,7 @@
 }
 
  .workDisplay .display img{
-  border-radius: 40px;
+  /* border-radius: 40px; */
   margin: auto;
   max-width: 90%;
   max-height: 90%;

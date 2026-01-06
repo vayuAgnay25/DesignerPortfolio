@@ -4,11 +4,15 @@ import L2 from "../assets/works/P2.png";
 import L3 from "../assets/works/DS1.png";
 import L4 from "../assets/works/P3.png";
 import L5 from "../assets/works/P4.png";
+import L6 from "../assets/works/P5.svg";
+import L7 from "../assets/works/P6.svg";
 import V1 from "../assets/works/AIVA.mp4";
 import V2 from "../assets/works/iBook.mp4"
 import I1 from "../assets/works/memo.png"
 import I2 from "../assets/works/DesignGuideline.png"
 import I3 from "../assets/works/roamMate.png"
+import I4 from "../assets/works/certyFast.png"
+import I5 from "../assets/works/migrate.png"
 import outerSVG from "../assets/arrow.svg";
 import { Link } from "react-router-dom";
 
@@ -83,6 +87,34 @@ const workCategory = [
         videoSrc: null,
         imageSrc: I2,
         rdr: "design system",
+        theme: { backgroundColor: "#f5f5f5", borderColor: "#f5f5f5" }
+    },
+    {
+        type: "UX",
+        title: "CertyFAST - SaaS Tool",
+        paragraph: <span>CertyFAST simplifies Power BI model development by automating error detection, DAX formatting, and 
+            documentation to deliver high-quality, consistent reports.<br/><br/>It quickly identifies performance and alignment 
+            issues while ensuring compliance with best practices and organizational standards. With clear insights into semantic 
+            models and field lineage, teams can maintain accuracy, reduce review effort, and deploy reliable reports faster.</span>,
+        logo: L6,
+        link: "certyFast",
+        videoSrc: null,
+        imageSrc: I4,
+        rdr: "SaaS Tool",
+        theme: { backgroundColor: "#f5f5f5", borderColor: "#f5f5f5" }
+    },
+    {
+        type: "UX",
+        title: "MigrateFAST",
+        paragraph: <span>MigrateFAST accelerates your transition to Microsoft Fabric by simplifying large-scale Tableau-to-Power BI 
+            migrations using AI-powered automation. <br/><br/>It reduces migration time and effort by up to 40% while ensuring 
+            accurate, high-quality report conversion. With a structured end-to-end process—from inventory analysis and planning to 
+            governance and ongoing support—MigrateFAST delivers optimized, reliable Power BI models at scale.</span>,
+        logo: L7,
+        link: "migrateFast",
+        videoSrc: null,
+        imageSrc: I5,
+        rdr: "SaaS Tool",
         theme: { backgroundColor: "#f5f5f5", borderColor: "#f5f5f5" }
     }
 ]

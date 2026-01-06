@@ -306,25 +306,17 @@ return (
 );
 }
 
-function Redirect() {
+function Redirect(proxy) {
   useEffect(() => {
-    window.location.href = "https://www.figma.com/proto/ttC7Bz7NEpTWjdUPe7TJNI/Design-system---Images?page-id=0%3A1&node-id=5-61&viewport=7201%2C7315%2C0.06&t=JNtEx4iYCeLjMyeT-8&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=5%3A61&hide-ui=1"
-  }, [])
-
+  const redirectTo = document.createElement('a');
+  redirectTo.href = proxy.link;
+  redirectTo.click();
+  }, []);
   return (<>
     <h1>Redirecting...</h1>
   </>)
 }
 
-function Redirect2() {
-  useEffect(() => {
-    window.location.href = "https://docs.google.com/document/d/1vNzXhFLy6IXZqN-bli2muUxo4BAeKRKrFb4t855YyJA/edit?usp=sharing"
-  }, [])
-
-  return (<>
-    <h1>Redirecting...</h1>
-  </>)
-}
 
 function Error() {
   const redirectTo = document.createElement('a');
@@ -345,8 +337,10 @@ export default function App() {
       <Routes>
         <Route path='/' element={<Main />} />
         <Route path='/roamMate' element={<RoamMate />} />
-        <Route path="/designSystem" element={<Redirect />} />
-        <Route path="/userInterview" element={<Redirect2 />} />
+        <Route path="/designSystem" element={<Redirect link  = "https://www.figma.com/proto/ttC7Bz7NEpTWjdUPe7TJNI/Design-system---Images?page-id=0%3A1&node-id=5-61&viewport=7201%2C7315%2C0.06&t=JNtEx4iYCeLjMyeT-8&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=5%3A61&hide-ui=1" />}/>
+        <Route path="/userInterview" element={<Redirect link = "https://docs.google.com/document/d/1vNzXhFLy6IXZqN-bli2muUxo4BAeKRKrFb4t855YyJA/edit?usp=sharing" />} />
+        <Route path="/certyFast" element={<Redirect link = "https://maqsoftware.com/certyFAST" />} />
+        <Route path="/migrateFast" element={<Redirect link = "https://maqsoftware.com/migrateFAST" />} />
         <Route path='/*' element={<Error />} />
       </Routes>
     </BrowserRouter>
