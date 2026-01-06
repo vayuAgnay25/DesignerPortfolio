@@ -70,7 +70,7 @@ function Main() {
   /* insert all useEffects here */
   useEffect(() => {
     // Saare target classes ki list
-    const selectors = ['.dive-title', '.keep-title', '.keep-title-2', '.glanceTitle', '.animate', '.reveal'];
+    const selectors = ['.dive-title', '.keep-title', '.keep-title-2', '.glanceTitle', '.animate'];
     const allObservers = [];
 
     // Sabhi selectors par loop chalayein
