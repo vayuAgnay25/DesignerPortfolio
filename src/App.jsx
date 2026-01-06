@@ -100,210 +100,210 @@ function Main() {
     };
   }, []);
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentTime(new Date());
-    }, 1000);
+useEffect(() => {
+  const timer = setInterval(() => {
+    setCurrentTime(new Date());
+  }, 1000);
 
-    return () => clearInterval(timer);
-  }, []);
+  return () => clearInterval(timer);
+}, []);
 
-  const hours = String(currentTime.getHours()).padStart(2, '0');
-  const minutes = String(currentTime.getMinutes()).padStart(2, '0');
+const hours = String(currentTime.getHours()).padStart(2, '0');
+const minutes = String(currentTime.getMinutes()).padStart(2, '0');
 
-  return (
-    <div id='main' ref={mainRef}>
-      <div id="nav">
-        <div id="time">
-          <img src={logo} alt="logo" />
-          <p>
-            {`${hours}:${minutes} `}
-            <span>IST</span>
-          </p>
-        </div>
-        <div id="link">
-          <ul>
-            <li>
-              <a
-                href="#page2"
-                onClick={() => setActiveTab('story')}
-                className={activeTab === 'story' ? 'active' : ''}
-              >
-                story
-              </a>
-            </li>
-            <li>
-              <a
-                href="#page7"
-                onClick={() => setActiveTab('work')}
-                className={activeTab === 'work' ? 'active' : ''}
-              >
-                work
-              </a>
-            </li>
-            <li>
-              <a
-                href="#page8"
-                onClick={() => setActiveTab('captures')}
-                className={activeTab === 'captures' ? 'active' : ''}
-              >
-                captures
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="GIT">
-          <a
-            href="#page9"
-            onClick={() => setActiveTab('git')}
-            className={activeTab === 'git' ? 'active' : ''}
-          >
-            get in touch
-          </a>
-        </div>
+return (
+  <div id='main' ref={mainRef}>
+    <div id="nav">
+      <div id="time">
+        <img src={logo} alt="logo" />
+        <p>
+          {`${hours}:${minutes} `}
+          <span>IST</span>
+        </p>
       </div>
-
-      <div id="page1" className="pageBunch">
-        <div onMouseMove={Page1animation} className="layer">
-
-          <div className="paragraph">
-            {/* Animated Part */}
-            <div className="sliding-window">
-              <div className="sliding-list">
-                {/* Array mapping for clean code */}
-                {greetingList.map((text, index) => (
-                  <span key={index} className="greeting">{text}</span>
-                ))}
-                {/* Repeat for smooth loop */}
-                <span className="greeting">{greetingList[0]}</span>
-              </div>
-            </div>
-            <h1>I'm Rainy.</h1><br />
-            <p onMouseEnter={upwardMove} onMouseLeave={backToNormal} >I'm a Senior UX Designer at MAQ Software, shaping digital journeys that help people explore, discover, and interact with products more effortlessly.</p><p>I love designing and building products.</p>
-          </div>
-          <img id="rainyProfile" src={rainyProfile} alt="Profile" />
-        </div>
+      <div id="link">
+        <ul>
+          <li>
+            <a
+              href="#page2"
+              onClick={() => setActiveTab('story')}
+              className={activeTab === 'story' ? 'active' : ''}
+            >
+              story
+            </a>
+          </li>
+          <li>
+            <a
+              href="#page7"
+              onClick={() => setActiveTab('work')}
+              className={activeTab === 'work' ? 'active' : ''}
+            >
+              work
+            </a>
+          </li>
+          <li>
+            <a
+              href="#page8"
+              onClick={() => setActiveTab('captures')}
+              className={activeTab === 'captures' ? 'active' : ''}
+            >
+              captures
+            </a>
+          </li>
+        </ul>
       </div>
-      <div id="page2" className="pageBunch">
+      <div id="GIT">
+        <a
+          href="#page9"
+          onClick={() => setActiveTab('git')}
+          className={activeTab === 'git' ? 'active' : ''}
+        >
+          get in touch
+        </a>
+      </div>
+    </div>
+
+    <div id="page1" className="pageBunch">
+      <div onMouseMove={Page1animation} className="layer">
+
         <div className="paragraph">
-          <div className="aboutLine">
-            <p>about</p>
-            <div className="buttonSwitch">
-              <button
-                onClick={() => setActiveTab('story')}
-                className={activeTab === 'story' ? 'active' : ''}
-                id="story"
-              >
-                <img src={S1} alt="" /> Story
-              </button>
-              <button
-                onClick={() => setActiveTab('timeline')}
-                className={activeTab === 'timeline' ? 'active' : ''}
-                id="timeline"
-              >
-                <img src={T1} alt="" /> Timeline
-              </button>
+          {/* Animated Part */}
+          <div className="sliding-window">
+            <div className="sliding-list">
+              {/* Array mapping for clean code */}
+              {greetingList.map((text, index) => (
+                <span key={index} className="greeting">{text}</span>
+              ))}
+              {/* Repeat for smooth loop */}
+              <span className="greeting">{greetingList[0]}</span>
             </div>
           </div>
-
-          <div className="aboutContent">
-            {activeTab === 'story' ? <Story /> : <TimeLine />}
-            <Image />
+          <h1>I'm Rainy.</h1><br />
+          <p onMouseEnter={upwardMove} onMouseLeave={backToNormal} >I'm a Senior UX Designer at MAQ Software, shaping digital journeys that help people explore, discover, and interact with products more effortlessly.</p><p>I love designing and building products.</p>
+        </div>
+        <img id="rainyProfile" src={rainyProfile} alt="Profile" />
+      </div>
+    </div>
+    <div id="page2" className="pageBunch">
+      <div className="paragraph">
+        <div className="aboutLine">
+          <p>about</p>
+          <div className="buttonSwitch">
+            <button
+              onClick={() => setActiveTab('story')}
+              className={activeTab === 'story' ? 'active' : ''}
+              id="story"
+            >
+              <img src={S1} alt="" /> Story
+            </button>
+            <button
+              onClick={() => setActiveTab('timeline')}
+              className={activeTab === 'timeline' ? 'active' : ''}
+              id="timeline"
+            >
+              <img src={T1} alt="" /> Timeline
+            </button>
           </div>
         </div>
-      </div>
 
-      <div id="page3" className="pageBunch">
-        <Camera />
-      </div>
-      <motion.div
-        whileInView={{
-          backgroundColor: "#222222"
-        }}
-        onViewportLeave={{ backgroundColor: "#ffffff" }}
-        id="page4"
-        className=" pageBunch"
-        ref={addtoRefs}
-      >
-        <div className="dive-deep">
-          <h1 className="dive-title" >
-            <span>Sometimes,</span>
-            {/* <span>&nbsp;</span> */}
-            <span>I</span>
-            {/* <span>&nbsp;</span> */}
-            <span>dive</span>
-            {/* <span>&nbsp;</span> */}
-            <span>deep.</span>
-          </h1>
-          <p>
-            I love exploring complex systems—design libraries or codebases, and breaking them down to understand what drives them. Discovering the “why” behind the “what” is what excites me.
-          </p>
-        </div>
-      </motion.div>
-      <div id="page5" className=" pageBunch">
-        <div className="keep-simple">
-          <h1 className='keep-title'>
-            <span>And</span>
-            <span>then,</span>
-            <span>I</span>
-            <span>just</span>
-            <span>try</span>
-            <span>to</span>
-          </h1>
-          <h2 className='keep-title-2'>
-            <span>Keep</span>
-            <span>it</span>
-            <span>simple.</span>
-          </h2>
-          <p>
-            Good design shouldn't scream for attention. It should just work, quietly and effectively.
-          </p>
-        </div>
-      </div>
-      <div id="page6" ref={addtoRefs} className=' pageBunch'>
-        <HoverImages />
-      </div>
-      <div id="page7" className=' pageBunch'>
-        <Work />
-      </div>
-      <div id="page8" ref={addtoRefs} className=' pageBunch'>
-        <Gallery />
-      </div>
-      <div id="page9" className=' pageBunch'>
-        <div className="contactPage">
-          <h1 id='CHead'>
-            Ready to Start?
-          </h1>
-          <p id='CLine'>
-            Let's create something amazing together. Drop me a line and let's get the conversation started.
-          </p>
-          <button id='contact'>
-            get in Touch
-          </button>
-          <div className="buttons">
-            <a href="" id="link2" className='linkedin'>
-              <img src={null} alt="" />
-              <p>Linkedin</p>
-            </a>
-            <a href="" id="link3" className='behance'>
-              <img src={null} alt="" />
-              <p>Behance</p>
-            </a>
-            <a href="" id="link1" className='dribble'>
-              <img src={null} alt="" />
-              <p>Dribble</p>
-            </a>
-            <a href="" id="link4" className='mail'>
-              <p>Gmail</p>
-            </a>
-          </div>
-          <p id='location'>
-            Dharamshala, India
-          </p>
+        <div className="aboutContent">
+          {activeTab === 'story' ? <Story /> : <TimeLine />}
+          <Image />
         </div>
       </div>
     </div>
-  );
+
+    <div id="page3" className="pageBunch">
+      <Camera />
+    </div>
+    <motion.div
+      whileInView={{
+        backgroundColor: "#222222"
+      }}
+      onViewportLeave={{ backgroundColor: "#ffffff" }}
+      id="page4"
+      className=" pageBunch"
+      ref={addtoRefs}
+    >
+      <div className="dive-deep">
+        <h1 className="dive-title" >
+          <span>Sometimes,</span>
+          {/* <span>&nbsp;</span> */}
+          <span>I</span>
+          {/* <span>&nbsp;</span> */}
+          <span>dive</span>
+          {/* <span>&nbsp;</span> */}
+          <span>deep.</span>
+        </h1>
+        <p>
+          I love exploring complex systems—design libraries or codebases, and breaking them down to understand what drives them. Discovering the “why” behind the “what” is what excites me.
+        </p>
+      </div>
+    </motion.div>
+    <div id="page5" className=" pageBunch">
+      <div className="keep-simple">
+        <h1 className='keep-title'>
+          <span>And</span>
+          <span>then,</span>
+          <span>I</span>
+          <span>just</span>
+          <span>try</span>
+          <span>to</span>
+        </h1>
+        <h2 className='keep-title-2'>
+          <span>Keep</span>
+          <span>it</span>
+          <span>simple.</span>
+        </h2>
+        <p>
+          Good design shouldn't scream for attention. It should just work, quietly and effectively.
+        </p>
+      </div>
+    </div>
+    <div id="page6" ref={addtoRefs} className=' pageBunch'>
+      <HoverImages />
+    </div>
+    <div id="page7" className=' pageBunch'>
+      <Work />
+    </div>
+    <div id="page8" ref={addtoRefs} className=' pageBunch'>
+      <Gallery />
+    </div>
+    <div id="page9" className=' pageBunch'>
+      <div className="contactPage">
+        <h1 id='CHead'>
+          Ready to Start?
+        </h1>
+        <p id='CLine'>
+          Let's create something amazing together. Drop me a line and let's get the conversation started.
+        </p>
+        <button id='contact'>
+          get in Touch
+        </button>
+        <div className="buttons">
+          <a href="https://www.linkedin.com/in/rainy-priya-6ab2a0186/" rel='noopener noreferrer' target='__blank' id="link2" className='linkedin'>
+            <img src={null} alt="" />
+            <p>Linkedin</p>
+          </a>
+          <a href="https://www.behance.net/rainy_" rel='noopener noreferrer' target='__blank' id="link3" className='behance'>
+            <img src={null} alt="" />
+            <p>Behance</p>
+          </a>
+          <a href="https://dribbble.com/rainy__" rel='noopener noreferrer' target='__blank' id="link1" className='dribble'>
+            <img src={null} alt="" />
+            <p>Dribble</p>
+          </a>
+          <a href="mailto:27.09.rainy@gmail.com" rel='noopener noreferrer' id="link4" className='mail'>
+            <p>Gmail</p>
+          </a>
+        </div>
+        <p id='location'>
+          Dharamshala, India
+        </p>
+      </div>
+    </div>
+  </div>
+);
 }
 
 function Redirect() {
