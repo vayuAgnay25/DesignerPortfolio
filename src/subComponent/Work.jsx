@@ -91,7 +91,7 @@ const workCategory = [
     },
     {
         type: "UX",
-        title: "CertyFAST - SaaS Tool",
+        title: "CertyFAST - Report Audit Tool",
         paragraph: <span>CertyFAST simplifies Power BI model development by automating error detection, DAX formatting, and 
             documentation to deliver high-quality, consistent reports.<br/><br/>It quickly identifies performance and alignment 
             issues while ensuring compliance with best practices and organizational standards. With clear insights into semantic 
@@ -105,7 +105,7 @@ const workCategory = [
     },
     {
         type: "UX",
-        title: "MigrateFAST",
+        title: "MigrateFAST - Migrating Reports Tool",
         paragraph: <span>MigrateFAST accelerates your transition to Microsoft Fabric by simplifying large-scale Tableau-to-Power BI 
             migrations using AI-powered automation. <br/><br/>It reduces migration time and effort by up to 40% while ensuring 
             accurate, high-quality report conversion. With a structured end-to-end process—from inventory analysis and planning to 
