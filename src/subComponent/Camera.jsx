@@ -2,18 +2,18 @@ import './cameraStyle.css'
 import { useState, useRef } from 'react'
 import html2canvas from 'html2canvas';
 const months = [
-  "Jan",
-  "Feb",
-  "Mar",
-  "Apr",
-  "May",
-  "Jun",
-  "Jul",
-  "Aug",
-  "Sept",
-  "Oct",
-  "Nov",
-  "Dec",
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sept",
+    "Oct",
+    "Nov",
+    "Dec",
 ];
 
 export default function Camera() {
@@ -26,7 +26,7 @@ export default function Camera() {
 
     async function togglePower() {
         if (!powerState) {
-            if (!!capturedImage) {
+            if (!capturedImage) {
                 document.getElementById('paper').classList.add('deleteEffect')
                 document.getElementById('paper').classList.remove('printEffect')
 
@@ -93,7 +93,7 @@ export default function Camera() {
             ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
 
             const imageFile = canvas.toDataURL("image/png");
-            
+
             setCapturedImage(imageFile);
             setLocalDate(formatTime)
             document.getElementById('paper').classList.add('printEffect')
@@ -149,7 +149,8 @@ export default function Camera() {
 
     return (
         <div className="cameraPlacement" ref={imageRef}>
-            <h6>Snap a polaroid-style moment</h6>
+            <h6>If you're looking great, snap a Polaroid-style photo and keep it saved on your device 😊
+            </h6>
             <div className="cameraBody" id="camera">
                 <div className="sensorCategory">
                     <button onClick={togglePower} id="power" aria-label="Power Button">

@@ -1,12 +1,8 @@
 #imageGallery{
     display: grid;
-    height: auto;
-    width: 100%;
-    /* margin-left: -29%; */
     margin-top: 10%;
     grid-template-columns: repeat(4,1fr);
     gap: 60px;
-    /* scale: 60%; */
     max-width: 1100px;
 }
 
@@ -32,8 +28,9 @@
 }
 
 #imageGallery div.card img{
-    width: 91%;
-    height: 82%;
+    width: 90%;
+    height: auto;
+    margin-top: 6%;
 }
 
 /* card positioning */
